@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,12 +98,12 @@
             <span><a href="../巡更管理/property_Patrolling_NFC.html">NFC订单</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z9.png" alt=""></em>设备巡检<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
-        <div class="left_slide" style="display:block">
-            <span><a href="equipment_index.jsp">内容模板</a></span>
+        <div class="left_slide"  style="display:block">
+            <span ><a href="equipment_index.jsp">内容模板</a></span>
             <span style="background-color:#ff3816"><a href="equipment_manage.html">设备管理</a></span>
             <span><a href="equipment_plan.html">巡检计划</a></span>
             <span><a href="equipment_message.html">巡检信息</a></span>
-            <span><a href="equipment_NFC.html">NFC订单</a></span>
+            <span><a href="equiment_manage_NFC.jsp">NFC订单</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z10.png" alt=""></em>小区门禁<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
         <div class="left_slide">
@@ -134,67 +135,43 @@
     </div>
 </div>
 <div class="con_head" id="con_head">
-    <em><img src="../../images/Hshebeixunjian.png" alt=""></em><a href="#">设施巡检</a><span>></span><a href="#">巡检设施管理</a>
+    <em><img src="../../images/Hshebeixunjian.png" alt=""></em><a href="#">设备巡检</a><span>></span><a href="#">巡检设施NFC制作</a>
 </div>
-<div class="con" style="margin-top:0;margin-left:200px;padding-top:15px;">
-    <div class="equipment_reach">
-        <p>
-            <label for="">设施名称:</label>
-            <input type="text" placeholder="模糊查询">
-            <input type="button" value="查询">
-        </p>
-    </div>
-    <div class="equipment_list">
-        <div class="equipment_list_title chairfix">
-            <div><img src="../../images/H_ViewGallery.png" alt=""></div>
-            <span>巡检设施列表</span>
-            <a href="equipment_manage_add.html">新增设施</a>
-            <a href="equiment_manage_NFC.jsp">NFC制作</a>
+<div class="con" style="margin-top:0;margin-left:200px;overflow: hidden">
+    <div class="equipment_index_biao">
+        <div class="equipment_index_top chairFix">
+            <div><img src="../../images/Hbi.png" alt=""></div>
+            <p>NFC制作信息</p>
         </div>
-        <div>
-            <ul class="equipment_list_mess equipment_managed_mess chairfix">
-                <li>巡检设施名称</li>
-                <li>所属小区</li>
-                <li>巡检设施内容</li>
-                <li>最后操作日期</li>
-                <li>操作人</li>
-                <li>设施详细信息</li>
-                <li style="width:15%">是否已提交NFC制作</li>
-                <li style="width:15%">是否重新制作NFC</li>
-                <li>操作</li>
-            </ul>
-        </div>
-        <ul class="equipment_list_message">
-            <li>
-                <ul class="equipment_list_mess equipment_managed_mess chairfix">
-                    <li><span>xxxx</span></li>
-                    <li><span>xxxx</span></li>
-                    <li><span>xxxx</span></li>
-                    <li><span>xxxx</span></li>
-                    <li><span>xxxx</span></li>
-                    <li><span>xxxx</span></li>
-                    <li style="width:15%"><span>xxxx</span></li>
-                    <li style="width:15%"><span>xxxx</span></li>
-                    <li><span><a href="" class="equipment_list_xiuG">修改</a></span></li>
-                </ul>
-            </li>
-        </ul>
-        <div class="equipment_list_foot chairfix">
-            <p>从
-                <span class="equipment_list_footSpa1">1</span>到
-                <span class="equipment_list_footSpa2">1</span>/共
-                <span class="equipment_list_footSpa3">1</span>数据
-            </p>
-            <p>
-                <a href="">首页</a>
-                <a href="">前一页</a>
-                <span>1</span>
-                <a href="">后一页</a>
-                <a href="">尾页</a>
-            </p>
+        <form action="" class="theForm equipmetn_theForm">
+            <div>
+                <label for="">NFC设备单价:</label>
+                <p>15.00元</p>
+            </div>
+            <div>
+                <label for="">设备制作总数量:</label>
+                <p>1</p>
+            </div>
+            <div>
+                <label for="">总金额:</label>
+                <p>15.00元</p>
+            </div>
+            <div>
+                <label for="">联系人</label>
+                <input type="text" class="thePeo">
+            </div>
+            <div>
+                <label for="">联系电话</label>
+                <input type="text" class="thePhone">
+            </div>
+        </form>
+        <div class="theForm_fot">
+            <a href="javascript:;" class="save" style="width:80px;" id="sub">提交订单</a>
+            <a href="equipment_manage.html" class="close">返回</a>
         </div>
     </div>
 </div>
+<div class="waring">请输入巡检内容</div>
 <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
 <script>
     /*左侧效果*/
@@ -222,6 +199,48 @@
         var a=$(this).html();
         $('.hr_show').html(a);
     });
+    /*警告框*/
+    function alWar(){
+        setTimeout(function(){
+            $(".waring").show()
+            timer1=setInterval(function(){
+                a+=1/20;
+                if (a>=1) {
+                    a=1;
+                    clearInterval(timer1)
+                };
+                $(".waring").get(0).style.opacity=a
+            },50)
+        },100)
+        setTimeout(function(){
+            timer2= setInterval(function(){
+                a-=1/10;
+                if (a<=0) {
+                    a=0;
+                    $(".waring").hide()
+                    clearInterval(timer2)
+                }
+                $(".waring").get(0).style.opacity=a;
+            },50)
+        },2100)
+    }
+    var timer1=timer2=null;
+    var a=0;
+    $("#sub").click(function(){
+        var a=0;
+        clearInterval(timer1)
+        clearInterval(timer2);
+        if($(".thePeo").val()==""){
+            $(".waring").html("请输入联系人")
+            alWar()
+        }
+        else{
+            if($(".thePhone").val()==""){
+                $(".waring").html("请输入联系电话")
+                alWar()
+            }
+        }
+    })
     /*输入框聚焦效果*/
     $("input").addClass("cr_ipt1")
     $("input").css("border","1px solid #CDCDCD")

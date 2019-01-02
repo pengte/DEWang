@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,8 +99,8 @@
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z9.png" alt=""></em>设备巡检<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
         <div class="left_slide" style="display:block">
-            <span><a href="equipment_index.jsp">内容模板</a></span>
-            <span style="background-color:#ff3816"><a href="equipment_manage.html">设备管理</a></span>
+            <span style="background-color:#ff3816"><a href="equipment_index.jsp">内容模板</a></span>
+            <span><a href="equipment_manage.html">设备管理</a></span>
             <span><a href="equipment_plan.html">巡检计划</a></span>
             <span><a href="equipment_message.html">巡检信息</a></span>
             <span><a href="equipment_NFC.html">NFC订单</a></span>
@@ -134,12 +135,12 @@
     </div>
 </div>
 <div class="con_head" id="con_head">
-    <em><img src="../../images/Hshebeixunjian.png" alt=""></em><a href="#">设施巡检</a><span>></span><a href="#">巡检设施管理</a>
+    <em><img src="../../images/Hshebeixunjian.png" alt=""></em><a href="#">设施巡检</a><span>></span><a href="#">巡检模板管理</a>
 </div>
-<div class="con" style="margin-top:0;margin-left:200px;padding-top:15px;">
+<div class="con" style="margin-left:200px;margin-top:0;padding-top:15px;">
     <div class="equipment_reach">
         <p>
-            <label for="">设施名称:</label>
+            <label for="">模板查询:</label>
             <input type="text" placeholder="模糊查询">
             <input type="button" value="查询">
         </p>
@@ -147,34 +148,29 @@
     <div class="equipment_list">
         <div class="equipment_list_title chairfix">
             <div><img src="../../images/H_ViewGallery.png" alt=""></div>
-            <span>巡检设施列表</span>
-            <a href="equipment_manage_add.html">新增设施</a>
-            <a href="equiment_manage_NFC.jsp">NFC制作</a>
+            <span>自定义巡检模板列表</span>
+            <a href="equipment_index_add.jsp">新增模板</a>
         </div>
         <div>
-            <ul class="equipment_list_mess equipment_managed_mess chairfix">
-                <li>巡检设施名称</li>
+            <ul class="equipment_list_mess chairfix">
+                <li>模板名称</li>
                 <li>所属小区</li>
-                <li>巡检设施内容</li>
-                <li>最后操作日期</li>
-                <li>操作人</li>
-                <li>设施详细信息</li>
-                <li style="width:15%">是否已提交NFC制作</li>
-                <li style="width:15%">是否重新制作NFC</li>
+                <li style="width:20%">模板巡检内容</li>
+                <li style="width:20%">最后操作日期</li>
+                <li style="width:20%">操作人</li>
+                <li>版本号</li>
                 <li>操作</li>
             </ul>
         </div>
         <ul class="equipment_list_message">
             <li>
-                <ul class="equipment_list_mess equipment_managed_mess chairfix">
+                <ul class="equipment_list_mess chairfix">
                     <li><span>xxxx</span></li>
                     <li><span>xxxx</span></li>
+                    <li style="width:20%"><span>xxxx</span></li>
+                    <li style="width:20%"><span>xxxx</span></li>
+                    <li style="width:20%"><span>xxxx</span></li>
                     <li><span>xxxx</span></li>
-                    <li><span>xxxx</span></li>
-                    <li><span>xxxx</span></li>
-                    <li><span>xxxx</span></li>
-                    <li style="width:15%"><span>xxxx</span></li>
-                    <li style="width:15%"><span>xxxx</span></li>
                     <li><span><a href="" class="equipment_list_xiuG">修改</a></span></li>
                 </ul>
             </li>
