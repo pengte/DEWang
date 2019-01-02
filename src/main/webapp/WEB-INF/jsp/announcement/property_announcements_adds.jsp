@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>通知公告</title>
+    <title>新增通知公告</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/property.css">
-    <link rel="stylesheet" href="../../css/property_announcements.css">
+    <link rel="stylesheet" href="../../css/property_announcements_adds.css">
 </head>
 <body>
 <!--头部-->
@@ -136,52 +136,55 @@
     <div class="con_head" id="con_head">
         <em><img src="../../images/wy.png" alt=""></em><a href="#">通知/公告</a>
     </div>
-    <div class="con"  style="border:1px solid #ccc;margin-top: 15px;margin-left: 220px;margin-right: 10px;">
-        <div class="con_head2" style="font-weight: bold;color: #666;">
-            <em><img src="../../images/qb.png" alt=""></em>通知/公告列表
-            <a href="property_announcements_adds.html" class="ch_a">新增通知/公告</a>
+    <div class="con"  style="border:1px solid #ccc;margin-top: 15px;margin-left: 220px;margin-right: 10px;height: 620px;">
+        <div class="con_left">
+            <div class="con_left_head">
+                <em><img src="../../images/y_ad.png" alt=""></em>新增通知公告
+            </div>
+            <div class="con_box">
+                <form action="">
+                    <div class="figs">
+                        <span><em>*</em>标题：</span>
+                        <input type="text" class="cr_ipt1"style="width: 800px;">
+                    </div>
+                    <div class="figs" style="overflow: hidden;height: auto;padding: 10px 0 10px 60px;">
+                        <span style="float: left"><em>*</em>内容：</span>
+                        <textarea name="" id="" style="float: left;width: 800px;height: 310px;font-size: 16px;color: #666;padding: 5px;border:1px solid #ddd;" class="cr_ipt1"></textarea>
+                    </div>
+                    <div class="figs">
+                        <span>类型：</span>
+                        <select name="" style="font-size: 12px">
+                            <option value="tz">通知</option>
+                            <option value="gg">公告</option>
+                        </select>
+                    </div>
+                    <div class="figs">
+                        <span>通知对象：</span>
+                        <select name="" style="font-size: 12px">
+                            <option value="tz">选择(不选则发给小区所有用户)</option>
+                            <option value="tz">美景天城</option>
+                            <option value="gg">美景天城二</option>
+                        </select>
+                    </div>
+                    <div class="btn">
+                        <button style="margin-left: 360px;">保存</button>
+                        <a href="property_announcements.jsp" class="btn_a" style="background-color: #ff3816">取消</a>
+                    </div>
+                </form>
+            </div>
         </div>
-        <table class="list">
-            <tr class="t_head">
-                <td style="width: 500px;">标题</td>
-                <td style="width: 100px;">类型</td>
-                <td style="width: 100px;">编辑者</td>
-                <td style="width: 90px;">状态</td>
-                <td style="width: 100px;">归属小区</td>
-                <td style="width: 200px;">创建时间</td>
-                <td style="width: 50px;">操作</td>
-            </tr>
-            <tr>
-                <td style="width: 500px;">464646464564</td>
-                <td>12354654</td>
-                <td>54</td>
-                <td>454</td>
-                <td>55454</td>
-                <td>2017年2月14日16:43:01</td>
-                <td><button>删除</button></td>
-            </tr>
-            <tr>
-                <td style="width: 500px;">464646464564</td>
-                <td>12354654</td>
-                <td>54</td>
-                <td>454</td>
-                <td>55454</td>
-                <td>2017年2月14日16:43:01</td>
-                <td><button>删除</button></td>
-            </tr>
-        </table>
-        <ul class="fy">
-            <li>首页</li>
-            <li>前一页</li>
-            <li>后一页</li>
-            <li>尾页</li>
-        </ul>
     </div>
     <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
     <script>
-        /*删除效果*/
-        $('.list button').click(function () {
-            $(this).parent().parent().remove();
+
+        /*输入框聚焦效果*/
+        $('.cr_ipt1').focus(function () {
+            var i=$(this).index('.cr_ipt1');
+            $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 5px #0599FB','border':'1px solid #5bc0de'});
+        });
+        $('.cr_ipt1').blur(function () {
+            var i=$(this).index('.cr_ipt1');
+            $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 0 #fff','border':'1px solid #ddd'});
         });
 
         /*左侧效果*/
@@ -210,6 +213,8 @@
             var a=$(this).html();
             $('.hr_show').html(a);
         });
+
+
 
     </script>
 </body>
