@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,11 +98,12 @@
             <span><a href="../巡更管理/property_Patrolling_NFC.html">NFC订单</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z9.png" alt=""></em>设备巡检<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
-        <div class="left_slide"  style="display:block">
-            <span ><a href="equipment_index.jsp">内容模板</a></span>
-            <span style="background-color:#ff3816"><a href="equipment_manage.jsp">设备管理</a></span>
+        <div class="left_slide" style="display:block">
+            <span><a href="equipment_index.jsp">内容模板</a></span>
+            <span><a href="equipment_manage.jsp">设备管理</a></span>
             <span><a href="equipment_plan.html">巡检计划</a></span>
-            <span><a href="equipment_message.html">巡检信息</a></span>
+            <span style="background-color:#ff3816"><a href="equipment_message.jsp
+            ">巡检信息</a></span>
             <span><a href="equipment_NFC.html">NFC订单</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z10.png" alt=""></em>小区门禁<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
@@ -134,133 +136,171 @@
     </div>
 </div>
 <div class="con_head" id="con_head">
-    <em><img src="../../images/Hshebeixunjian.png" alt=""></em><a href="#">设备巡检</a><span>></span><a href="#">巡检设施管理</a><span>></span><a href="#">新增巡检设施</a>
+    <em><img src="../../images/Hshebeixunjian.png" alt=""></em><a href="#">设施巡检</a><span>></span><a href="#">巡检详情</a>
 </div>
-<div class="con" style="margin-top:0;margin-left:200px;overflow:hidden">
-    <div class="equipment_index_biao">
-        <div class="equipment_index_top chairFix">
-            <div><img src="../../images/Hbi.png" alt=""></div>
-            <p>新增设施信息</p>
+<div class="con" style="margin-top:0;margin-left:200px;padding-top:15px;">
+    <div class="conChang">
+        <div class="conChang_title chairfix">
+            <span class="select">巡检异常信息</span>
+            <span>巡检任务统计/报表</span>
         </div>
-        <form action="" class="theForm equipmetn_theForm">
-            <div>
-                <label for=""><em>*</em>巡检设施标题</label>
-                <input type="text" class="ipt1">
-            </div>
-            <div>
-                <label for=""><em>*</em>巡检内容模板:</label>
-                <p>
-                    <span class="theBord"></span>
-                    <a href="javascript:;" class="chooseBord">选择模板</a>
-                </p>
-            </div>
-            <div>
-                <label for="">总金额:</label>
-                <p>15.00元</p>
-            </div>
-            <div>
-                <label for="">批量添加</label>
-                <select name="" id="">
-                    <option value="是">是</option>
-                    <option value="否">否</option>
-                </select>
-            </div>
-        </form>
-    </div>
-    <div class="equipment_index_biao">
-        <div class="equipment_index_top chairFix">
-            <div><img src="../../images/Hbi.png" alt=""></div>
-            <p>新增设施信息</p>
-        </div>
-        <form action="" class="theForm equipmetn_theForm">
-            <div>
-                <label for="" >设备名称</label>
-                <input type="text"  class="ipt2">
-            </div>
-            <div>
-                <label for="">型号</label>
-                <input type="text"  class="ipt3">
-            </div>
-            <div>
-                <label for="">品牌</label>
-                <input type="text"  class="ipt4">
-            </div>
-            <div>
-                <label for="">生产厂家</label>
-                <input type="text"  class="ipt5">
-            </div>
-            <div>
-                <label for="">生产日期</label>
-                <input type="date"  class="ipt6">
-            </div>
-            <div>
-                <label for="">采购日期</label>
-                <input type="date"  class="ipt7">
-            </div>
-            <div>
-                <label for="">采购单价</label>
-                <input type="text"  class="ipt8">
-            </div>
-            <div>
-                <label for="">功能描述</label>
-                <textarea name="" id="" cols="30" rows="10"  class="ipt9"></textarea>
-            </div>
-        </form>
-        <div class="theForm_fot">
-            <a href="javascript:;" class="save">保存</a>
-            <a href="equipment_manage.jsp" class="close">返回</a>
-        </div>
-    </div>
-</div>
-<div class="mask"></div>
-<div class="waring">请输入巡检内容</div>
-<div class="maskCon">
-    <div class="maskCon_top chairfix">
-        <span>选择模板</span>
-        <var class="maskCon_top_del">x</var>
-    </div>
-    <div class="equipment_list" style="width:95%;border:none">
-        <div style="background-color:#EFEFEF;border:1px solid #CDCDCD">
-            <div class="equipment_list_title chairfix">
-                <div><img src="../../images/H_ViewGallery.png" alt=""></div>
-                <span>巡检内容模板列表</span>
-            </div>
-            <div>
-                <ul class="equipment_list_mess equipment_managed_mess maskCon_mess chairfix">
-                    <li><span>模板名称</span></li>
-                    <li><span>版本号</span></li>
-                    <li style="width:34%"><sapan>操作</sapan></li>
-                </ul>
-            </div>
-            <ul class="equipment_list_message">
-                <li>
-                    <ul class="equipment_list_mess equipment_managed_mess maskCon_mess chairfix">
-                        <li><span>xxx</span></li>
-                        <li><span>xxxx</span></li>
-                        <li style="width:34%">
-                            <span><a href="javascript:;">选择模板</a></span>
-                        </li>
+        <div class="conChang_content">
+            <div class="equipment_list conChang_content1" style="display:block">
+                <div class="equipment_list_title chairfix">
+                    <div><img src="../../images/H_ViewGallery.png" alt=""></div>
+                    <span>巡检设施NFC订单</span>
+                </div>
+                <div>
+                    <ul class="equipment_list_mess equipment_managed_mess chairfix">
+                        <li style="width:15%">订单编号</li>
+                        <li>所属小区</li>
+                        <li>制作数量</li>
+                        <li>金额</li>
+                        <li>提交日期</li>
+                        <li>操作人</li>
+                        <li>查看详情</li>
+                        <li>状态</li>
+                        <li style="width:15%">操作</li>
                     </ul>
-                </li>
-            </ul>
-            <div class="equipment_list_foot chairfix">
-                <p>从
-                    <span class="equipment_list_footSpa1">1</span>到
-                    <span class="equipment_list_footSpa2">1</span>/共
-                    <span class="equipment_list_footSpa3">1</span>数据
-                </p>
-                <p>
-                    <a href="">首页</a>
-                    <a href="">前一页</a>
-                    <span>1</span>
-                    <a href="">后一页</a>
-                    <a href="">尾页</a>
-                </p>
+                </div>
+                <ul class="equipment_list_message">
+                    <li>
+                        <ul class="equipment_list_mess equipment_managed_mess chairfix">
+                            <li style="width:15%"><span>xxxx</span></li>
+                            <li><span>xxxx</span></li>
+                            <li><span>xxxx</span></li>
+                            <li><span>xxxx</span></li>
+                            <li><span>xxxx</span></li>
+                            <li><span>xxxx</span></li>
+                            <li><span>xxxx</span></li>
+                            <li><span>xxxx</span></li>
+                            <li style="width:15%"><span><a href="" class="equipment_list_xiuG">修改</a></span></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="equipment_list_foot chairfix">
+                    <p>从
+                        <span class="equipment_list_footSpa1">1</span>到
+                        <span class="equipment_list_footSpa2">1</span>/共
+                        <span class="equipment_list_footSpa3">1</span>数据
+                    </p>
+                    <p>
+                        <a href="">首页</a>
+                        <a href="">前一页</a>
+                        <span>1</span>
+                        <a href="">后一页</a>
+                        <a href="">尾页</a>
+                    </p>
+                </div>
+            </div>
+            <div class="conChang_content1" style="display:none">
+                <div class="conChang_content1_date">
+                    <label for="">时间段:</label>
+                    <input type="date">
+                    -
+                    <input type="date">
+                    <input type="button" value="查询">
+                </div>
+                <div class="equipment_list ">
+                    <div class="equipment_list_title conChang_title chairfix">
+                        <div><img src="../../images/H_ViewGallery.png" alt=""></div>
+                        <span>巡检任务统计/报表</span>
+                    </div>
+                    <div class="innerCon chairfix">
+                        <div class="theContent_left">
+                            没有数据
+                        </div>
+                        <div class="theContent_right">
+                            <div>
+                                <ul class="equipment_list_mess theContent_mess chairfix" style="border-top:none">
+                                    <li style="width:20%">巡检人姓名</li>
+                                    <li style="width:20%">巡检人电话</li>
+                                    <li>所属小区</li>
+                                    <li>巡检任务总数</li>
+                                    <li>已完成</li>
+                                    <li>未完成</li>
+                                </ul>
+                            </div>
+                            <ul class="equipment_list_message">
+                                <li>
+                                    <ul class="equipment_list_mess theContent_mess chairfix">
+                                        <li  style="width:20%"><span>xxxx</span></li>
+                                        <li  style="width:20%"><span>xxxx</span></li>
+                                        <li><span>xxxx</span></li>
+                                        <li><span>xxxx</span></li>
+                                        <li><span>xxxx</span></li>
+                                        <li><span><a href="" class="equipment_list_xiuG">修改</a></span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="equipment_list_foot chairfix">
+                                <p>从
+                                    <span class="equipment_list_footSpa1">1</span>到
+                                    <span class="equipment_list_footSpa2">1</span>/共
+                                    <span class="equipment_list_footSpa3">1</span>数据
+                                </p>
+                                <p>
+                                    <a href="">首页</a>
+                                    <a href="">前一页</a>
+                                    <span>1</span>
+                                    <a href="">后一页</a>
+                                    <a href="">尾页</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="conChang_content1_foot">
+                    <div class="equipment_list">
+                        <div class="equipment_list_title chairfix">
+                            <span style="margin-left:20px;">巡检任务详细信息</span>
+                        </div>
+                        <div>
+                            <ul class="equipment_list_mess equipment_managed_mess chairfix">
+                                <li style="width:15%">巡检任务名称</li>
+                                <li>所属小区</li>
+                                <li>巡检创建日期</li>
+                                <li>巡检人</li>
+                                <li>巡检人电话</li>
+                                <li>状态</li>
+                                <li>巡检设施总数</li>
+                                <li style="width:15%">已检设施数</li>
+                                <li>未检设施数</li>
+                            </ul>
+                        </div>
+                        <ul class="equipment_list_message">
+                            <li>
+                                <ul class="equipment_list_mess equipment_managed_mess chairfix">
+                                    <li style="width:15%"><span>xxxx</span></li>
+                                    <li><span>xxxx</span></li>
+                                    <li><span>xxxx</span></li>
+                                    <li><span>xxxx</span></li>
+                                    <li><span>xxxx</span></li>
+                                    <li><span>xxxx</span></li>
+                                    <li><span>xxxx</span></li>
+                                    <li style="width:15%"><span>xxxx</span></li>
+                                    <li><span><a href="" class="equipment_list_xiuG">修改</a></span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="equipment_list_foot chairfix">
+                            <p>从
+                                <span class="equipment_list_footSpa1">1</span>到
+                                <span class="equipment_list_footSpa2">1</span>/共
+                                <span class="equipment_list_footSpa3">1</span>数据
+                            </p>
+                            <p>
+                                <a href="">首页</a>
+                                <a href="">前一页</a>
+                                <span>1</span>
+                                <a href="">后一页</a>
+                                <a href="">尾页</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="maskCon_fot equipment_list_fot chairfix">
-        <a href="javascript:;" class="maskCon_fot_quXiao">取消</a>
     </div>
 </div>
 <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
@@ -290,67 +330,18 @@
         var a=$(this).html();
         $('.hr_show').html(a);
     });
-    /*弹出效果*/
-    function alWar(){
-        setTimeout(function(){
-            $(".waring").show()
-            timer1=setInterval(function(){
-                a+=1/20;
-                if (a>=1) {
-                    a=1;
-                    clearInterval(timer1)
-                };
-                $(".waring").get(0).style.opacity=a
-            },50)
-        },100)
-        setTimeout(function(){
-            timer2= setInterval(function(){
-                a-=1/10;
-                if (a<=0) {
-                    a=0;
-                    $(".waring").hide()
-                    clearInterval(timer2)
-                }
-                $(".waring").get(0).style.opacity=a;
-            },50)
-        },2100)
-    }
-    var timer1=timer2=null;
-    var a=0;
-    $(".save").click(function(){
-        var a=0;
-        clearInterval(timer1);
-        clearInterval(timer2);
-        if($(".ipt1").val()==""){
-            $(".waring").html("请添加巡检设施标题")
-            $(".ipt1").css("border","1px solid #FF3816")
-            alWar()
-        }
-        else{
-            if($(".theBord").get(0).innerHTML==""){
-                $(".waring").html("请选择模板")
-                $(".ipt1").css("border","1px solid #CDCDCD")
-                alWar()
-            }
-        }
-    })
-    $(".maskCon_top_del").click(function(){
-        $(".mask").hide();
-        $(".maskCon").hide();
-    })
-    $(".maskCon_fot_quXiao").click(function(){
-        $(".mask").hide();
-        $(".maskCon").hide();
-    })
-    $(".chooseBord").click(function(){
-        $(".mask").show();
-        $(".maskCon").show();
+    /*切换*/
+    $(".conChang_title span").click(function(){
+        var i=$(".conChang_title span").index(this)
+        $(this).addClass("select");
+        $(this).siblings().removeClass("select")
+        $(".conChang_content1").hide()
+        $(".conChang_content1").eq(i).show()
     })
     /*输入框聚焦效果*/
-    $("input[type=text]").addClass("cr_ipt1")
-    $("textarea").addClass("cr_ipt1")
-    $("input[type=text]").css("border","1px solid #CDCDCD")
-    $("textarea").css("border","1px solid #CDCDCD")
+    $("input").addClass("cr_ipt1")
+    $("input").css("border","1px solid #CDCDCD")
+    $("input[type=button]").removeClass("cr_ipt1")
     $('.cr_ipt1').focus(function () {
         var i=$(this).index('.cr_ipt1');
         $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 5px #0599FB','border':'1px solid #5bc0de'});

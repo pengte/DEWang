@@ -102,7 +102,7 @@
             <span><a href="equipment_index.jsp">内容模板</a></span>
             <span style="background-color:#ff3816"><a href="equipment_manage.jsp">设备管理</a></span>
             <span><a href="equipment_plan.html">巡检计划</a></span>
-            <span><a href="equipment_message.html">巡检信息</a></span>
+            <span><a href="equipment_message.jsp">巡检信息</a></span>
             <span><a href="equipment_NFC.html">NFC订单</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z10.png" alt=""></em>小区门禁<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
@@ -149,7 +149,7 @@
         <div class="equipment_list_title chairfix">
             <div><img src="../../images/H_ViewGallery.png" alt=""></div>
             <span>巡检设施列表</span>
-            <a href="equipment_manage_add.html">新增设施</a>
+            <a href="equipment_manage_add.jsp">新增设施</a>
             <a href="equiment_manage_NFC.jsp">NFC制作</a>
         </div>
         <div>
