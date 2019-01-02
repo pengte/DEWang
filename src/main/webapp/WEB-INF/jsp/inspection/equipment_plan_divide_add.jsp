@@ -100,8 +100,8 @@
         <a href="javascript:;" class="li_a"><em><img src="../../images/z9.png" alt=""></em>设备巡检<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
         <div class="left_slide"  style="display:block">
             <span ><a href="equipment_index.jsp">内容模板</a></span>
-            <span style="background-color:#ff3816"><a href="equipment_manage.jsp">设备管理</a></span>
-            <span><a href="equipment_plan.jsp">巡检计划</a></span>
+            <span><a href="equipment_manage.jsp">设备管理</a></span>
+            <span style="background-color:#ff3816"><a href="equipment_plan.jsp">巡检计划</a></span>
             <span><a href="equipment_message.jsp">巡检信息</a></span>
             <span><a href="equipment_NFC.jsp">NFC订单</a></span>
         </div>
@@ -135,111 +135,63 @@
     </div>
 </div>
 <div class="con_head" id="con_head">
-    <em><img src="../../images/Hshebeixunjian.png" alt=""></em><a href="#">设备巡检</a><span>></span><a href="#">巡检设施管理</a><span>></span><a href="#">新增巡检设施</a>
+    <em><img src="../../images/Hshebeixunjian.png" alt=""></em><a href="#">设备巡检</a><span>></span><a href="#">巡检任务推送计划</a><span>></span><a href="#">巡检设施分组</a><span>></span><a href="#">新增设施分组</a>
 </div>
 <div class="con" style="margin-top:0;margin-left:200px;overflow:hidden">
     <div class="equipment_index_biao">
         <div class="equipment_index_top chairFix">
             <div><img src="../../images/Hbi.png" alt=""></div>
-            <p>新增设施信息</p>
+            <p>新增分组信息</p>
         </div>
         <form action="" class="theForm equipmetn_theForm">
             <div>
-                <label for=""><em>*</em>巡检设施标题</label>
-                <input type="text" class="ipt1">
+                <label for=""><em>*</em>分组名称</label>
+                <input type="text" class="divide_name">
             </div>
             <div>
-                <label for=""><em>*</em>巡检内容模板:</label>
+                <label for=""><em>*</em>包含设施:</label>
                 <p>
                     <span class="theBord"></span>
-                    <a href="javascript:;" class="chooseBord">选择模板</a>
+                    <a href="javascript:;" class="chooseBord">添加设施</a>
                 </p>
-            </div>
-            <div>
-                <label for="">总金额:</label>
-                <p>15.00元</p>
-            </div>
-            <div>
-                <label for="">批量添加</label>
-                <select name="" id="">
-                    <option value="是">是</option>
-                    <option value="否">否</option>
-                </select>
-            </div>
-        </form>
-    </div>
-    <div class="equipment_index_biao">
-        <div class="equipment_index_top chairFix">
-            <div><img src="../../images/Hbi.png" alt=""></div>
-            <p>新增设施信息</p>
-        </div>
-        <form action="" class="theForm equipmetn_theForm">
-            <div>
-                <label for="" >设备名称</label>
-                <input type="text"  class="ipt2">
-            </div>
-            <div>
-                <label for="">型号</label>
-                <input type="text"  class="ipt3">
-            </div>
-            <div>
-                <label for="">品牌</label>
-                <input type="text"  class="ipt4">
-            </div>
-            <div>
-                <label for="">生产厂家</label>
-                <input type="text"  class="ipt5">
-            </div>
-            <div>
-                <label for="">生产日期</label>
-                <input type="date"  class="ipt6">
-            </div>
-            <div>
-                <label for="">采购日期</label>
-                <input type="date"  class="ipt7">
-            </div>
-            <div>
-                <label for="">采购单价</label>
-                <input type="text"  class="ipt8">
-            </div>
-            <div>
-                <label for="">功能描述</label>
-                <textarea name="" id="" cols="30" rows="10"  class="ipt9"></textarea>
             </div>
         </form>
         <div class="theForm_fot">
             <a href="javascript:;" class="save">保存</a>
-            <a href="equipment_manage.jsp" class="close">返回</a>
+            <a href="equipment_plan_divide.jsp" class="close">返回</a>
         </div>
     </div>
 </div>
 <div class="mask"></div>
-<div class="waring">请输入巡检内容</div>
+<div class="waring">请输入分组名称</div>
 <div class="maskCon">
     <div class="maskCon_top chairfix">
-        <span>选择模板</span>
+        <span>选择设施</span>
         <var class="maskCon_top_del">x</var>
     </div>
-    <div class="equipment_list" style="width:95%;border:none">
+    <div class="equipment_reach maskCon_reach">
+        <p>
+            <label for="">设备名称:</label>
+            <input type="text" placeholder="模糊查询">
+            <input type="button" value="查询">
+        </p>
+    </div>
+    <div class="equipment_list" style="width:95%;border:none;height:313px;">
         <div style="background-color:#EFEFEF;border:1px solid #CDCDCD">
-            <div class="equipment_list_title chairfix">
-                <div><img src="../../images/H_ViewGallery.png" alt=""></div>
-                <span>巡检内容模板列表</span>
-            </div>
             <div>
-                <ul class="equipment_list_mess equipment_managed_mess maskCon_mess chairfix">
-                    <li><span>模板名称</span></li>
-                    <li><span>版本号</span></li>
-                    <li style="width:34%"><sapan>操作</sapan></li>
+                <ul class="equipment_list_mess  maskCon_mess chairfix" style="border-top:none">
+                    <li>巡检设施名称</li>
+                    <li>所属小区</li>
+                    <li style="width:34%">操作</li>
                 </ul>
             </div>
             <ul class="equipment_list_message">
                 <li>
-                    <ul class="equipment_list_mess equipment_managed_mess maskCon_mess chairfix">
+                    <ul class="equipment_list_mess maskCon_mess chairfix">
                         <li><span>xxx</span></li>
                         <li><span>xxxx</span></li>
                         <li style="width:34%">
-                            <span><a href="javascript:;">选择模板</a></span>
+                            <span><a href="javascript:;">选择设施</a></span>
                         </li>
                     </ul>
                 </li>
@@ -261,7 +213,7 @@
         </div>
     </div>
     <div class="maskCon_fot equipment_list_fot chairfix">
-        <a href="javascript:;" class="maskCon_fot_quXiao">取消</a>
+        <a href="javascript:;"  class="maskCon_fot_quXiao">取消</a>
     </div>
 </div>
 <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
@@ -322,15 +274,15 @@
         var a=0;
         clearInterval(timer1);
         clearInterval(timer2);
-        if($(".ipt1").val()==""){
-            $(".waring").html("请添加巡检设施标题")
-            $(".ipt1").css("border","1px solid #FF3816")
+        if($(".divide_name").val()==""){
+            $(".waring").html("请添加分组名称！")
+            $(".divide_name").css("border","1px solid #FF3816")
             alWar()
         }
         else{
             if($(".theBord").get(0).innerHTML==""){
-                $(".waring").html("请选择模板")
-                $(".ipt1").css("border","1px solid #CDCDCD")
+                $(".waring").html("请添加设施！")
+                $(".divide_name").css("border","1px solid #CDCDCD")
                 alWar()
             }
         }
@@ -348,10 +300,9 @@
         $(".maskCon").show();
     })
     /*输入框聚焦效果*/
-    $("input[type=text]").addClass("cr_ipt1")
-    $("textarea").addClass("cr_ipt1")
-    $("input[type=text]").css("border","1px solid #CDCDCD")
-    $("textarea").css("border","1px solid #CDCDCD")
+    $("input").addClass("cr_ipt1")
+    $("input").css("border","1px solid #CDCDCD")
+    $("input[type=button]").removeClass("cr_ipt1")
     $('.cr_ipt1').focus(function () {
         var i=$(this).index('.cr_ipt1');
         $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 5px #0599FB','border':'1px solid #5bc0de'});

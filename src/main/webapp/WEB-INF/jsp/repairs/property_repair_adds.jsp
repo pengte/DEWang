@@ -1,14 +1,16 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>J
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>内部通知</title>
+    <title>新增报修信息</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/property.css">
-    <link rel="stylesheet" href="../../css/property_Internal_notification.css">
+    <link rel="stylesheet" href="../../css/property_repair_adds.css">
+    <style>
+    </style>
 </head>
 <body>
 <!--头部-->
@@ -88,7 +90,7 @@
                 </div>
                 <a href="../通知公告/property_announcements.html" class="li_a2"><em><img src="../../images/z3.png" alt=""></em>通知公告</a>
                 <a href="../业主投诉/property_complaints.html" class="li_a2"><em><img src="../../images/z4.png" alt=""></em>业主投诉</a>
-                <a href="../业主报修/property_repair.html" class="li_a2"><em><img src="../../images/z5.png" alt=""></em>业主报修</a>
+                <a href="../业主报修/property_repair.html" class="li_a2" style="background-color: #50B3F5;"><em><img src="../../images/z5.png" alt=""></em>业主报修</a>
                 <a href="../管家IM/property_steward.html" class="li_a2"><em><img src="../../images/z6.png" alt=""></em>管家IM</a>
                 <a href="../呼叫中心/property_callcenter.html" class="li_a2"><em><img src="../../images/z7.png" alt=""></em>呼叫中心</a>
                 <a href="javascript:;" class="li_a"><em><img src="../../images/z8.png" alt=""></em>巡更管理<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
@@ -117,8 +119,8 @@
                 <span><a href="../增值服务/valueService_activity.html">活动发布</a></span>
             </div>
             <a href="javascript:;" class="li_a"><em><img src="../../images/z12.png" alt=""></em>内部管理<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
-            <div class="left_slide" style="display: block;">
-                <span style="background-color: #ff3816"><a href="../内部管理/property_Internal_notification.html">内部通知</a></span>
+            <div class="left_slide">
+                <span><a href="../内部管理/property_Internal_notification.html">内部通知</a></span>
             </div>
                 <a href="javascript:;" class="li_a"><em><img src="../../images/z13.png" alt=""></em>系统管理<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
                 <div class="left_slide" style="padding-bottom: 80px;">
@@ -135,51 +137,65 @@
         </div>
     </div>
     <div class="con_head" id="con_head">
-        <em><img src="../../images/wy.png" alt=""></em><a href="#">内部管理</a><span>></span><a href="#">内部通知</a>
+        <em><img src="../../images/wy.png" alt=""></em><a href="#">物业管理</a><span>></span><a href="#">报修</a>
     </div>
-    <div class="con"  style="margin-top: 15px;margin-left: 220px;margin-right: 10px;">
+    <div class="con"  style="border:1px solid #ccc;margin-top: 15px;margin-left: 220px;margin-right: 10px;height: 460px;">
         <div class="con_left">
             <div class="con_left_head">
-                <em><img src="../../images/xql.png" alt=""></em>内部通知
-                <a href="property_notification_adds.jsp" class="ch_a">新增</a>
+                <em><img src="../../images/y_ad.png" alt=""></em>新增报修信息
             </div>
-            <table class="list">
-                <tr class="t_head">
-                    <td>封面</td>
-                    <td>发布对象</td>
-                    <td>状态</td>
-                    <td>是否置顶</td>
-                    <td>发布时间</td>
-                    <td>操作</td>
-                </tr>
-                <tr>
-                    <td>46465</td>
-                    <td>46465</td>
-                    <td>46465</td>
-                    <td>46465</td>
-                    <td>2017年2月17日14:32:11</td>
-                    <td><button>修改</button></td>
-                </tr>
-            </table>
-            <ul class="fy">
-                <li>首页</li>
-                <li>前一页</li>
-                <li>后一页</li>
-                <li>尾页</li>
-            </ul>
+            <div class="con_box">
+                <form action="">
+                    <div class="figs">
+                        <span>类型：</span>
+                        <select name="">
+                            <option value="kaiqi">个人报修</option>
+                            <option value="guanbi">公共报修</option>
+                        </select>
+                    </div>
+                    <div class="figs">
+                        <span><em>*</em>报修房号缩写：</span>
+                        <input type="text" placeholder="报修房号" class="cr_ipt1">
+                    </div>
+                    <div class="figs">
+                        <span><em>*</em>报修人姓名：</span>
+                        <input type="text" placeholder="报修人姓名" style="width: 200px;" class="cr_ipt1">
+                    </div>
+                    <div class="figs">
+                        <span><em>*</em>报修人电话：</span>
+                        <input type="text" placeholder="报修人电话" style="width: 200px;" class="cr_ipt1">
+                    </div>
+                    <div class="figs" style="overflow: hidden;height: auto;padding: 10px 0 10px 60px;">
+                        <span style="float: left"><em>*</em>报修内容：</span>
+                        <textarea name="" id="" style="float: left;width: 710px;height: 110px;font-size: 16px;color: #666;padding: 5px;border:1px solid #ddd;" class="cr_ipt1"></textarea>
+                    </div>
+                    <div class="btn">
+                        <button style="margin-left: 60px;" class="btnn">保存</button>
+                        <a href="property_repair.jsp" class="btn_a" style="background-color: #ff3816">返回</a>
+                    </div>
+                </form>
+            </div>
         </div>
-
     </div>
     <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
     <script>
 
 
-
+        /*输入框聚焦效果*/
+        $('.cr_ipt1').focus(function () {
+            var i=$(this).index('.cr_ipt1');
+            $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 5px #0599FB','border':'1px solid #5bc0de'});
+        });
+        $('.cr_ipt1').blur(function () {
+            var i=$(this).index('.cr_ipt1');
+            $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 0 #fff','border':'1px solid #ddd'});
+        });
 
         /*左侧效果*/
         $(".li_a").bind("click", function() {
            $(this).next(".left_slide").slideToggle(250).siblings(".left_slide").slideUp(250);
         });
+
         /*头部右侧效果*/
         $(document).click(function(ev){
             var e=ev||window.event;

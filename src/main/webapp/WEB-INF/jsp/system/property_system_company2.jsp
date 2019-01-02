@@ -1,14 +1,14 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>J
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>内部通知</title>
+    <title>编辑公司信息</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/property.css">
-    <link rel="stylesheet" href="../../css/property_Internal_notification.css">
+    <link rel="stylesheet" href="../../css/property_system_company2.css">
 </head>
 <body>
 <!--头部-->
@@ -117,12 +117,12 @@
                 <span><a href="../增值服务/valueService_activity.html">活动发布</a></span>
             </div>
             <a href="javascript:;" class="li_a"><em><img src="../../images/z12.png" alt=""></em>内部管理<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
-            <div class="left_slide" style="display: block;">
-                <span style="background-color: #ff3816"><a href="../内部管理/property_Internal_notification.html">内部通知</a></span>
+            <div class="left_slide">
+                <span><a href="../内部管理/property_Internal_notification.html">内部通知</a></span>
             </div>
                 <a href="javascript:;" class="li_a"><em><img src="../../images/z13.png" alt=""></em>系统管理<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
-                <div class="left_slide" style="padding-bottom: 80px;">
-                    <span><a href="../系统管理/property_system_company.html">物业公司</a></span>
+                <div class="left_slide" style="padding-bottom: 80px;display: block">
+                    <span style="background-color: #ff3816"><a href="property_system_company.jsp">物业公司</a></span>
                     <span><a href="../系统管理/property_payment_information.html">支付信息</a></span>
                     <span><a href="../系统管理/property_Personnel_group.html">人员群组</a></span>
                     <span><a href="../系统管理/systems_estate.html">物业管理处</a></span>
@@ -134,52 +134,126 @@
                 </div>
         </div>
     </div>
-    <div class="con_head" id="con_head">
-        <em><img src="../../images/wy.png" alt=""></em><a href="#">内部管理</a><span>></span><a href="#">内部通知</a>
-    </div>
-    <div class="con"  style="margin-top: 15px;margin-left: 220px;margin-right: 10px;">
+    <div class="con"  style="border:1px solid #ccc;margin-top: 85px;margin-left: 220px;margin-right: 10px;height: 1190px;margin-bottom: 50px">
         <div class="con_left">
             <div class="con_left_head">
-                <em><img src="../../images/xql.png" alt=""></em>内部通知
-                <a href="property_notification_adds.jsp" class="ch_a">新增</a>
+                <em><img src="../../images/qb.png" alt=""></em>编辑公司基本信息
             </div>
-            <table class="list">
-                <tr class="t_head">
-                    <td>封面</td>
-                    <td>发布对象</td>
-                    <td>状态</td>
-                    <td>是否置顶</td>
-                    <td>发布时间</td>
-                    <td>操作</td>
-                </tr>
-                <tr>
-                    <td>46465</td>
-                    <td>46465</td>
-                    <td>46465</td>
-                    <td>46465</td>
-                    <td>2017年2月17日14:32:11</td>
-                    <td><button>修改</button></td>
-                </tr>
-            </table>
-            <ul class="fy">
-                <li>首页</li>
-                <li>前一页</li>
-                <li>后一页</li>
-                <li>尾页</li>
-            </ul>
+            <div class="con_box" style="padding-bottom: 30px;">
+                <form action="">
+                    <div class="figs">
+                        <span><em>*</em>物业公司名称：</span>
+                        <input type="text" class="cr_ipt1" style="width: 600px;" value="郑州市德旺物业管理有限公司">
+                    </div>
+                    <div class="figs">
+                        <span><em>*</em>公司名称简称：</span>
+                        <input type="text" style="width: 600px;" class="cr_ipt1">
+                    </div>
+                    <div class="figs" style="overflow: hidden;height: 230px;">
+                        <span style="float: left;">公司Logo：</span>
+                        <div style="float: left;">
+                            <div id="img_file" style="width: 200px;height: 150px;margin-top: 15px;margin-left: 5px">
+                                <img src="../../images/img.png" alt="" style="border: 0;">
+                            </div>
+                            <div>
+                                <a href="javascript:;" class="file">
+                                    上传Logo
+                                    <input type="file" name="" accept=".JPG,.JPEG,.PNG" id="photo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="figs" id="figs2" style="overflow: hidden;height: auto;padding: 10px 0 10px 60px;line-height: normal">
+                        <span style="float: left;width: 170px"><em>*</em>物业公司简介：</span>
+                        <div style="float: left">
+                            <textarea class="cr_ipt1" name="" id="" style="width: 450px;height: 150px;padding: 10px;border: 1px solid #ddd;font-size: 15px;color: #666;font-family: '微软雅黑', serif"></textarea>
+                        </div>
+                    </div>
+                    <div class="figs">
+                        <span><em>*</em>联系人：</span>
+                        <input type="text" class="cr_ipt1" value="Admin">
+                    </div>
+                    <div class="figs">
+                        <span><em>*</em>联系电话：</span>
+                        <input type="text" class="cr_ipt1">
+                    </div>
+                    <div class="figs">
+                        <span><em>*</em>Email地址：</span>
+                        <input type="text" class="cr_ipt1" value="610189942@qq.com">
+                    </div>
+                    <div class="figs">
+                        <span><em>*</em>地址：</span>
+                        <input type="text" class="cr_ipt1">
+                    </div>
+                    <div class="figs">
+                        <span><em>*</em>管理资质：</span>
+                        <select name="" style="width: 257px;border:1px solid #ccc;height: 34px">
+                            <option value="kaiqi">其他</option>
+                            <option value="guanbi">一级资质</option>
+                            <option value="guanbi">二级资质</option>
+                            <option value="guanbi">三级资质</option>
+                        </select>
+                    </div>
+                    <div class="figs">
+                        <span>公司营业执照号：</span>
+                        <input type="text" class="cr_ipt1">
+                    </div>
+                    <div class="figs">
+                        <span>注册资本：</span>
+                        <input type="text" class="cr_ipt1" value="0.00"> 万
+                    </div>
+                    <div class="figs" id="figs3" style="overflow: hidden;height: auto;padding: 10px 0 10px 60px;line-height: normal">
+                        <span style="float: left;width: 170px"><em>*</em>经营范围：</span>
+                        <div style="float: left">
+                            <textarea class="cr_ipt1" name=""style="width: 350px;height: 100px;padding: 10px;border: 1px solid #ddd;font-size: 15px;color: #666;font-family: '微软雅黑', serif"></textarea>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button style="margin-left: 60px;">保存</button>
+                        <a href="property_system_company.jsp" class="btn_a" style="background-color: #ff3816">返回</a>
+                    </div>
+                </form>
+            </div>
         </div>
-
     </div>
     <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
     <script>
 
+        /*上传图片效果*/
+        $("#photo").get(0).addEventListener('change',function(){
+            var files = this.files;
+            var img = new Image();
+            var reader = new FileReader();
+            reader.readAsDataURL(files[0]);
+            reader.onload = function(e){
+                var mb = (e.total/1024)/1024;
+                if(mb>= 1){
+                    alert('文件大小大于1M');
+                    return;
+                }
+                img.src = this.result;
+                if ($("#img_file").find("img").length){
+                    $("#img_file img").remove();
+                }
+                $("#img_file")[0].appendChild(img);
+            }
+        });
 
-
+        /*输入框聚焦效果*/
+        $('.cr_ipt1').focus(function () {
+            var i=$(this).index('.cr_ipt1');
+            $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 5px #0599FB','border':'1px solid #5bc0de'});
+        });
+        $('.cr_ipt1').blur(function () {
+            var i=$(this).index('.cr_ipt1');
+            $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 0 #fff','border':'1px solid #ddd'});
+        });
 
         /*左侧效果*/
         $(".li_a").bind("click", function() {
            $(this).next(".left_slide").slideToggle(250).siblings(".left_slide").slideUp(250);
         });
+
         /*头部右侧效果*/
         $(document).click(function(ev){
             var e=ev||window.event;
@@ -201,6 +275,7 @@
             var a=$(this).html();
             $('.hr_show').html(a);
         });
+
 
     </script>
 </body>

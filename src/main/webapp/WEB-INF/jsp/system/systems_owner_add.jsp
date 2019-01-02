@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/property.css">
-    <link rel="stylesheet" href="../../css/equipment.css">
+    <link rel="stylesheet" href="../../css/valueService.css">
+    <link rel="stylesheet" href="../../css/systemsManagement.css">
 </head>
 <body>
 <!--头部-->
@@ -98,12 +99,12 @@
             <span><a href="../巡更管理/property_Patrolling_NFC.html">NFC订单</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z9.png" alt=""></em>设备巡检<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
-        <div class="left_slide"  style="display:block">
-            <span ><a href="equipment_index.jsp">内容模板</a></span>
-            <span style="background-color:#ff3816"><a href="equipment_manage.jsp">设备管理</a></span>
-            <span><a href="equipment_plan.jsp">巡检计划</a></span>
-            <span><a href="equipment_message.jsp">巡检信息</a></span>
-            <span><a href="equipment_NFC.jsp">NFC订单</a></span>
+        <div class="left_slide">
+            <span ><a href="../设备巡检/equipment_index.html">内容模板</a></span>
+            <span><a href="../设备巡检/equipment_manage.html">设备管理</a></span>
+            <span><a href="../设备巡检/equipment_plan.html">巡检计划</a></span>
+            <span><a href="../设备巡检/equipment_message.html">巡检信息</a></span>
+            <span><a href="../设备巡检/equipment_NFC.html">NFC订单</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z10.png" alt=""></em>小区门禁<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
         <div class="left_slide">
@@ -121,149 +122,121 @@
             <span><a href="../内部管理/property_Internal_notification.html">内部通知</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z13.png" alt=""></em>系统管理<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
-        <div class="left_slide" style="padding-bottom: 80px;">
-            <span><a href="../系统管理/property_system_company.html">物业公司</a></span>
-            <span><a href="../系统管理/property_payment_information.html">支付信息</a></span>
-            <span><a href="../系统管理/property_Personnel_group.html">人员群组</a></span>
-            <span><a href="../系统管理/systems_estate.html">物业管理处</a></span>
-            <span><a href="../系统管理/systems_villageManagement.html">小区管理</a></span>
-            <span><a href="../系统管理/property_Housing_information.html">房屋信息</a></span>
-            <span><a href="../系统管理/systems_owner.html">业主信息</a></span>
-            <span><a href="../系统管理/systems_permission.html">角色权限</a></span>
-            <span><a href="../系统管理/systems_systemsLog.html">系统日志</a></span>
+        <div class="left_slide" style="padding-bottom: 80px;display:block">
+            <span><a href="property_system_company.jsp">物业公司</a></span>
+            <span><a href="property_payment_information.jsp">支付信息</a></span>
+            <span><a href="property_Personnel_group.jsp">人员群组</a></span>
+            <span><a href="systems_estate.jsp">物业管理处</a></span>
+            <span><a href="systems_villageManagement.jsp">小区管理</a></span>
+            <span><a href="property_Housing_information.jsp">房屋信息</a></span>
+            <span  style="background-color:#ff3816"><a href="systems_owner.jsp">业主信息</a></span>
+            <span><a href="systems_permission.jsp">角色权限</a></span>
+            <span><a href="systems_systemsLog.jsp">系统日志</a></span>
         </div>
     </div>
 </div>
 <div class="con_head" id="con_head">
-    <em><img src="../../images/Hshebeixunjian.png" alt=""></em><a href="#">设备巡检</a><span>></span><a href="#">巡检设施管理</a><span>></span><a href="#">新增巡检设施</a>
+    <em><img src="../../images/Hxitong.png" alt=""></em><a href="#">系统管理</a><span>></span><a href="#">业主信息</a>
 </div>
 <div class="con" style="margin-top:0;margin-left:200px;overflow:hidden">
     <div class="equipment_index_biao">
         <div class="equipment_index_top chairFix">
             <div><img src="../../images/Hbi.png" alt=""></div>
-            <p>新增设施信息</p>
+            <p>新增业主信息</p>
         </div>
         <form action="" class="theForm equipmetn_theForm">
             <div>
-                <label for=""><em>*</em>巡检设施标题</label>
+                <label for=""><em>*</em>选择房号</label>
                 <input type="text" class="ipt1">
             </div>
             <div>
-                <label for=""><em>*</em>巡检内容模板:</label>
-                <p>
-                    <span class="theBord"></span>
-                    <a href="javascript:;" class="chooseBord">选择模板</a>
+                <label for="">住户一</label>
+                <p class="sysOwnerP">
+                    <span>姓名</span>
+                    <input type="text">
+                    <span>电话</span>
+                    <input type="text">
+                    <select name="" id="">
+                        <option value="业主">业主</option>
+                        <option value="租户">租户</option>
+                    </select>
                 </p>
             </div>
             <div>
-                <label for="">总金额:</label>
-                <p>15.00元</p>
+                <label for="">住户二</label>
+                <p class="sysOwnerP">
+                    <span>姓名</span>
+                    <input type="text">
+                    <span>电话</span>
+                    <input type="text">
+                    <select name="" id="">
+                        <option value="业主">业主</option>
+                        <option value="租户">租户</option>
+                    </select>
+                </p>
             </div>
             <div>
-                <label for="">批量添加</label>
-                <select name="" id="">
-                    <option value="是">是</option>
-                    <option value="否">否</option>
-                </select>
-            </div>
-        </form>
-    </div>
-    <div class="equipment_index_biao">
-        <div class="equipment_index_top chairFix">
-            <div><img src="../../images/Hbi.png" alt=""></div>
-            <p>新增设施信息</p>
-        </div>
-        <form action="" class="theForm equipmetn_theForm">
-            <div>
-                <label for="" >设备名称</label>
-                <input type="text"  class="ipt2">
+                <label for="">住户三</label>
+                <p class="sysOwnerP">
+                    <span>姓名</span>
+                    <input type="text">
+                    <span>电话</span>
+                    <input type="text">
+                    <select name="" id="">
+                        <option value="业主">业主</option>
+                        <option value="租户">租户</option>
+                    </select>
+                </p>
             </div>
             <div>
-                <label for="">型号</label>
-                <input type="text"  class="ipt3">
+                <label for="">住户四</label>
+                <p class="sysOwnerP">
+                    <span>姓名</span>
+                    <input type="text">
+                    <span>电话</span>
+                    <input type="text">
+                    <select name="" id="">
+                        <option value="业主">业主</option>
+                        <option value="租户">租户</option>
+                    </select>
+                </p>
             </div>
             <div>
-                <label for="">品牌</label>
-                <input type="text"  class="ipt4">
+                <label for="">住户五</label>
+                <p class="sysOwnerP">
+                    <span>姓名</span>
+                    <input type="text">
+                    <span>电话</span>
+                    <input type="text">
+                    <select name="" id="">
+                        <option value="业主">业主</option>
+                        <option value="租户">租户</option>
+                    </select>
+                </p>
             </div>
             <div>
-                <label for="">生产厂家</label>
-                <input type="text"  class="ipt5">
-            </div>
-            <div>
-                <label for="">生产日期</label>
-                <input type="date"  class="ipt6">
-            </div>
-            <div>
-                <label for="">采购日期</label>
-                <input type="date"  class="ipt7">
-            </div>
-            <div>
-                <label for="">采购单价</label>
-                <input type="text"  class="ipt8">
-            </div>
-            <div>
-                <label for="">功能描述</label>
-                <textarea name="" id="" cols="30" rows="10"  class="ipt9"></textarea>
+                <label for="">住户
+                六</label>
+                <p class="sysOwnerP">
+                    <span>姓名</span>
+                    <input type="text">
+                    <span>电话</span>
+                    <input type="text">
+                    <select name="" id="">
+                        <option value="业主">业主</option>
+                        <option value="租户">租户</option>
+                    </select>
+                </p>
             </div>
         </form>
         <div class="theForm_fot">
             <a href="javascript:;" class="save">保存</a>
-            <a href="equipment_manage.jsp" class="close">返回</a>
+            <a href="systems_owner.jsp" class="close">返回</a>
         </div>
     </div>
 </div>
 <div class="mask"></div>
 <div class="waring">请输入巡检内容</div>
-<div class="maskCon">
-    <div class="maskCon_top chairfix">
-        <span>选择模板</span>
-        <var class="maskCon_top_del">x</var>
-    </div>
-    <div class="equipment_list" style="width:95%;border:none">
-        <div style="background-color:#EFEFEF;border:1px solid #CDCDCD">
-            <div class="equipment_list_title chairfix">
-                <div><img src="../../images/H_ViewGallery.png" alt=""></div>
-                <span>巡检内容模板列表</span>
-            </div>
-            <div>
-                <ul class="equipment_list_mess equipment_managed_mess maskCon_mess chairfix">
-                    <li><span>模板名称</span></li>
-                    <li><span>版本号</span></li>
-                    <li style="width:34%"><sapan>操作</sapan></li>
-                </ul>
-            </div>
-            <ul class="equipment_list_message">
-                <li>
-                    <ul class="equipment_list_mess equipment_managed_mess maskCon_mess chairfix">
-                        <li><span>xxx</span></li>
-                        <li><span>xxxx</span></li>
-                        <li style="width:34%">
-                            <span><a href="javascript:;">选择模板</a></span>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="equipment_list_foot chairfix">
-                <p>从
-                    <span class="equipment_list_footSpa1">1</span>到
-                    <span class="equipment_list_footSpa2">1</span>/共
-                    <span class="equipment_list_footSpa3">1</span>数据
-                </p>
-                <p>
-                    <a href="">首页</a>
-                    <a href="">前一页</a>
-                    <span>1</span>
-                    <a href="">后一页</a>
-                    <a href="">尾页</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="maskCon_fot equipment_list_fot chairfix">
-        <a href="javascript:;" class="maskCon_fot_quXiao">取消</a>
-    </div>
-</div>
 <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
 <script>
     /*左侧效果*/
@@ -323,35 +296,17 @@
         clearInterval(timer1);
         clearInterval(timer2);
         if($(".ipt1").val()==""){
-            $(".waring").html("请添加巡检设施标题")
+            $(".waring").html("请选择房号")
             $(".ipt1").css("border","1px solid #FF3816")
             alWar()
         }
         else{
-            if($(".theBord").get(0).innerHTML==""){
-                $(".waring").html("请选择模板")
-                $(".ipt1").css("border","1px solid #CDCDCD")
-                alWar()
-            }
+            $(".ipt1").css("border","1px solid #CDCDCD")
         }
     })
-    $(".maskCon_top_del").click(function(){
-        $(".mask").hide();
-        $(".maskCon").hide();
-    })
-    $(".maskCon_fot_quXiao").click(function(){
-        $(".mask").hide();
-        $(".maskCon").hide();
-    })
-    $(".chooseBord").click(function(){
-        $(".mask").show();
-        $(".maskCon").show();
-    })
     /*输入框聚焦效果*/
-    $("input[type=text]").addClass("cr_ipt1")
-    $("textarea").addClass("cr_ipt1")
-    $("input[type=text]").css("border","1px solid #CDCDCD")
-    $("textarea").css("border","1px solid #CDCDCD")
+    $("input").addClass("cr_ipt1")
+    $("input").css("border","1px solid #CDCDCD")
     $('.cr_ipt1').focus(function () {
         var i=$(this).index('.cr_ipt1');
         $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 5px #0599FB','border':'1px solid #5bc0de'});

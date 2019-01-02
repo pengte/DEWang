@@ -1,14 +1,14 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>J
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>内部通知</title>
+    <title>报修短信提醒</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/property.css">
-    <link rel="stylesheet" href="../../css/property_Internal_notification.css">
+    <link rel="stylesheet" href="../../css/property_repair_alerts.css">
 </head>
 <body>
 <!--头部-->
@@ -88,7 +88,7 @@
                 </div>
                 <a href="../通知公告/property_announcements.html" class="li_a2"><em><img src="../../images/z3.png" alt=""></em>通知公告</a>
                 <a href="../业主投诉/property_complaints.html" class="li_a2"><em><img src="../../images/z4.png" alt=""></em>业主投诉</a>
-                <a href="../业主报修/property_repair.html" class="li_a2"><em><img src="../../images/z5.png" alt=""></em>业主报修</a>
+                <a href="../业主报修/property_repair.html" class="li_a2" style="background-color: #50B3F5;"><em><img src="../../images/z5.png" alt=""></em>业主报修</a>
                 <a href="../管家IM/property_steward.html" class="li_a2"><em><img src="../../images/z6.png" alt=""></em>管家IM</a>
                 <a href="../呼叫中心/property_callcenter.html" class="li_a2"><em><img src="../../images/z7.png" alt=""></em>呼叫中心</a>
                 <a href="javascript:;" class="li_a"><em><img src="../../images/z8.png" alt=""></em>巡更管理<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
@@ -117,8 +117,8 @@
                 <span><a href="../增值服务/valueService_activity.html">活动发布</a></span>
             </div>
             <a href="javascript:;" class="li_a"><em><img src="../../images/z12.png" alt=""></em>内部管理<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
-            <div class="left_slide" style="display: block;">
-                <span style="background-color: #ff3816"><a href="../内部管理/property_Internal_notification.html">内部通知</a></span>
+            <div class="left_slide">
+                <span><a href="../内部管理/property_Internal_notification.html">内部通知</a></span>
             </div>
                 <a href="javascript:;" class="li_a"><em><img src="../../images/z13.png" alt=""></em>系统管理<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
                 <div class="left_slide" style="padding-bottom: 80px;">
@@ -135,46 +135,68 @@
         </div>
     </div>
     <div class="con_head" id="con_head">
-        <em><img src="../../images/wy.png" alt=""></em><a href="#">内部管理</a><span>></span><a href="#">内部通知</a>
+        <em><img src="../../images/wy.png" alt=""></em><a href="#">物业管理</a><span>></span><a href="#">报修</a><span>></span><a href="#">通知设置</a>
     </div>
-    <div class="con"  style="margin-top: 15px;margin-left: 220px;margin-right: 10px;">
+    <div class="con"  style="border:1px solid #ccc;margin-top: 15px;margin-left: 220px;margin-right: 10px;height: 500px;">
         <div class="con_left">
             <div class="con_left_head">
-                <em><img src="../../images/xql.png" alt=""></em>内部通知
-                <a href="property_notification_adds.jsp" class="ch_a">新增</a>
+                <em><img src="../../images/y_sz.png" alt=""></em>报修通知设置
             </div>
-            <table class="list">
-                <tr class="t_head">
-                    <td>封面</td>
-                    <td>发布对象</td>
-                    <td>状态</td>
-                    <td>是否置顶</td>
-                    <td>发布时间</td>
-                    <td>操作</td>
-                </tr>
-                <tr>
-                    <td>46465</td>
-                    <td>46465</td>
-                    <td>46465</td>
-                    <td>46465</td>
-                    <td>2017年2月17日14:32:11</td>
-                    <td><button>修改</button></td>
-                </tr>
-            </table>
-            <ul class="fy">
-                <li>首页</li>
-                <li>前一页</li>
-                <li>后一页</li>
-                <li>尾页</li>
-            </ul>
+            <div class="con_box">
+                <div class="cb_alert">
+                    <p>提示！</p>
+                    <div>
+                        小区开启短信通知后，业主的报修将会已短信的形式通知到”短信接收人“的手机上。
+                    </div>
+                </div>
+                <div class="figs" style="margin-top: 20px">
+                    <span>是否开启短信提醒：</span>
+                    <select name="">
+                        <option value="kaiqi">开启</option>
+                        <option value="guanbi">关闭</option>
+                    </select>
+                </div>
+                <div class="figs">
+                    <span>短信接收人：</span>
+                    <select name="">
+                        <option value="kaiqi">请选择</option>
+                        <option value="guanbi">Admin - 系统管理员</option>
+                    </select>
+                </div>
+                <div class="figs">
+                    <span>短信接收手机号码：</span>
+                    <input type="text" placeholder="短信接收手机号码" class="cr_ipt1">
+                </div>
+                <div class="figs">
+                    <span>短信接收人二：</span>
+                    <select name="">
+                        <option value="kaiqi">请选择</option>
+                        <option value="guanbi">Admin - 系统管理员</option>
+                    </select>
+                </div>
+                <div class="figs">
+                    <span>短信接收手机号码二：</span>
+                    <input type="text" placeholder="短信接收手机号码" class="cr_ipt1">
+                </div>
+                <div class="btn">
+                    <button style="margin-left: 60px;">保存</button>
+                    <a href="property_repair.jsp" class="btn_a" style="background-color: #ff3816">返回</a>
+                </div>
+            </div>
         </div>
-
     </div>
     <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
     <script>
 
-
-
+        /*输入框聚焦效果*/
+        $('.cr_ipt1').focus(function () {
+            var i=$(this).index('.cr_ipt1');
+            $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 5px #0599FB','border':'1px solid #5bc0de'});
+        });
+        $('.cr_ipt1').blur(function () {
+            var i=$(this).index('.cr_ipt1');
+            $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 0 #fff','border':'1px solid #ddd'});
+        });
 
         /*左侧效果*/
         $(".li_a").bind("click", function() {

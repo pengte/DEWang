@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/property.css">
-    <link rel="stylesheet" href="../../css/equipment.css">
+    <link rel="stylesheet" href="../../css/valueService.css">
+    <link rel="stylesheet" href="../../css/systemsManagement.css">
 </head>
 <body>
 <!--头部-->
@@ -98,12 +99,12 @@
             <span><a href="../巡更管理/property_Patrolling_NFC.html">NFC订单</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z9.png" alt=""></em>设备巡检<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
-        <div class="left_slide"  style="display:block">
-            <span ><a href="equipment_index.jsp">内容模板</a></span>
-            <span style="background-color:#ff3816"><a href="equipment_manage.jsp">设备管理</a></span>
-            <span><a href="equipment_plan.jsp">巡检计划</a></span>
-            <span><a href="equipment_message.jsp">巡检信息</a></span>
-            <span><a href="equiment_manage_NFC.jsp">NFC订单</a></span>
+        <div class="left_slide">
+            <span><a href="../设备巡检/equipment_index.html">内容模板</a></span>
+            <span><a href="../设备巡检/equipment_manage.html">设备管理</a></span>
+            <span><a href="../设备巡检/equipment_plan.html">巡检计划</a></span>
+            <span><a href="../设备巡检/equipment_message.html">巡检信息</a></span>
+            <span><a href="../设备巡检/equipment_NFC.html">NFC订单</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z10.png" alt=""></em>小区门禁<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
         <div class="left_slide">
@@ -112,7 +113,7 @@
         <a href="javascript:;" class="li_a"><em><img src="../../images/z11.png" alt=""></em>增值服务<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
         <div class="left_slide">
             <span><a href="../增值服务/valueService_life.html">生活黄页</a></span>
-            <span><a href="../增值服务/valueService_service.html">社区服务</a></span>
+            <span ><a href="../增值服务/valueService_service.html">社区服务</a></span>
             <span><a href="../增值服务/valueService_house.html">房屋租赁</a></span>
             <span><a href="../增值服务/valueService_activity.html">活动发布</a></span>
         </div>
@@ -121,57 +122,77 @@
             <span><a href="../内部管理/property_Internal_notification.html">内部通知</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z13.png" alt=""></em>系统管理<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
-        <div class="left_slide" style="padding-bottom: 80px;">
-            <span><a href="../系统管理/property_system_company.html">物业公司</a></span>
-            <span><a href="../系统管理/property_payment_information.html">支付信息</a></span>
-            <span><a href="../系统管理/property_Personnel_group.html">人员群组</a></span>
-            <span><a href="../系统管理/systems_estate.html">物业管理处</a></span>
-            <span><a href="../系统管理/systems_villageManagement.html">小区管理</a></span>
-            <span><a href="../系统管理/property_Housing_information.html">房屋信息</a></span>
-            <span><a href="../系统管理/systems_owner.html">业主信息</a></span>
-            <span><a href="../系统管理/systems_permission.html">角色权限</a></span>
-            <span><a href="../系统管理/systems_systemsLog.html">系统日志</a></span>
+        <div class="left_slide" style="padding-bottom: 80px;display:block">
+            <span><a href="property_system_company.jsp">物业公司</a></span>
+            <span><a href="property_payment_information.jsp">支付信息</a></span>
+            <span><a href="property_Personnel_group.jsp">人员群组</a></span>
+            <span  style="background-color:#ff3816"><a href="systems_estate.jsp">物业管理处</a></span>
+            <span><a href="systems_villageManagement.jsp">小区管理</a></span>
+            <span><a href="property_Housing_information.jsp">房屋信息</a></span>
+            <span><a href="systems_owner.jsp">业主信息</a></span>
+            <span><a href="systems_permission.jsp">角色权限</a></span>
+            <span><a href="systems_systemsLog.jsp">系统日志</a></span>
         </div>
     </div>
 </div>
 <div class="con_head" id="con_head">
-    <em><img src="../../images/Hshebeixunjian.png" alt=""></em><a href="#">设备巡检</a><span>></span><a href="#">巡检设施NFC制作</a>
+    <em><img src="../../images/Hxitong.png" alt=""></em><a href="#">系统管理</a><span>></span><a href="#">物业处管理</a>
 </div>
-<div class="con" style="margin-top:0;margin-left:200px;overflow: hidden">
-    <div class="equipment_index_biao">
-        <div class="equipment_index_top chairFix">
-            <div><img src="../../images/Hbi.png" alt=""></div>
-            <p>NFC制作信息</p>
+<div class="con" style="margin-top:0;margin-left:200px;padding-top:15px;">
+    <div class="equipment_list" style="margin-top:0;">
+        <div class="equipment_list_title chairfix">
+            <div><img src="../../images/H_ViewGallery.png" alt=""></div>
+            <span>管理处信息</span>
+            <a href="systems_estate_add.jsp">新增</a>
         </div>
-        <form action="" class="theForm equipmetn_theForm">
-            <div>
-                <label for="">NFC设备单价:</label>
-                <p>15.00元</p>
-            </div>
-            <div>
-                <label for="">设备制作总数量:</label>
-                <p>1</p>
-            </div>
-            <div>
-                <label for="">总金额:</label>
-                <p>15.00元</p>
-            </div>
-            <div>
-                <label for="">联系人</label>
-                <input type="text" class="thePeo">
-            </div>
-            <div>
-                <label for="">联系电话</label>
-                <input type="text" class="thePhone">
-            </div>
-        </form>
-        <div class="theForm_fot">
-            <a href="javascript:;" class="save" style="width:80px;" id="sub">提交订单</a>
-            <a href="equipment_manage.jsp" class="close">返回</a>
+        <div class="sysMana_select">
+            <p>
+                显示
+                <select name="" id="">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+                条
+            </p>
+        </div>
+        <div>
+            <ul class="equipment_list_mess sysMana_mess chairfix">
+                <li>管理处名称</li>
+                <li>管理处电话</li>
+                <li>小区名称</li>
+                <li>小区地址</li>
+                <li>操作</li>
+            </ul>
+        </div>
+        <ul class="equipment_list_message">
+            <li>
+                <ul class="equipment_list_mess sysMana_mess chairfix">
+                    <li><span>xxxx</span></li>
+                    <li><span>xxxx</span></li>
+                    <li><span>xxxx</span></li>
+                    <li><span>xxxx</span></li>
+                    <li><span><a href="" class="equipment_list_xiuG">修改</a></span></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="equipment_list_foot chairfix">
+            <p>从
+                <span class="equipment_list_footSpa1">1</span>到
+                <span class="equipment_list_footSpa2">1</span>/共
+                <span class="equipment_list_footSpa3">1</span>数据
+            </p>
+            <p>
+                <a href="">首页</a>
+                <a href="">前一页</a>
+                <span>1</span>
+                <a href="">后一页</a>
+                <a href="">尾页</a>
+            </p>
         </div>
     </div>
 </div>
-<div class="waring">请输入巡检内容</div>
 <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
 <script>
     /*左侧效果*/
@@ -199,60 +220,7 @@
         var a=$(this).html();
         $('.hr_show').html(a);
     });
-    /*警告框*/
-    function alWar(){
-        setTimeout(function(){
-            $(".waring").show()
-            timer1=setInterval(function(){
-                a+=1/20;
-                if (a>=1) {
-                    a=1;
-                    clearInterval(timer1)
-                };
-                $(".waring").get(0).style.opacity=a
-            },50)
-        },100)
-        setTimeout(function(){
-            timer2= setInterval(function(){
-                a-=1/10;
-                if (a<=0) {
-                    a=0;
-                    $(".waring").hide()
-                    clearInterval(timer2)
-                }
-                $(".waring").get(0).style.opacity=a;
-            },50)
-        },2100)
-    }
-    var timer1=timer2=null;
-    var a=0;
-    $("#sub").click(function(){
-        var a=0;
-        clearInterval(timer1)
-        clearInterval(timer2);
-        if($(".thePeo").val()==""){
-            $(".waring").html("请输入联系人")
-            alWar()
-        }
-        else{
-            if($(".thePhone").val()==""){
-                $(".waring").html("请输入联系电话")
-                alWar()
-            }
-        }
-    })
-    /*输入框聚焦效果*/
-    $("input").addClass("cr_ipt1")
-    $("input").css("border","1px solid #CDCDCD")
-    $("input[type=button]").removeClass("cr_ipt1")
-    $('.cr_ipt1').focus(function () {
-        var i=$(this).index('.cr_ipt1');
-        $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 5px #0599FB','border':'1px solid #5bc0de'});
-    });
-    $('.cr_ipt1').blur(function () {
-        var i=$(this).index('.cr_ipt1');
-        $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 0 #fff','border':'1px solid #ccc'});
-    });
+
 </script>
 </body>
 </html>

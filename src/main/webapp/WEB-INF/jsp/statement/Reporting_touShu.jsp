@@ -3,12 +3,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>物业后台</title>
+    <title>报表中心投诉统计</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/property.css">
-    <link rel="stylesheet" href="../../css/equipment.css">
+    <style>
+        body{background-color:#F9F9F9;color:#666}
+        header{z-index:100}
+        .chairFix:after{  content:"";  clear:both;  display:block;  }
+        #con_head a{  font-size:14px;  color: #666666;  }
+        .chooseIn_top{height:37px;line-height:37px;border-bottom:1px solid #CDCDCD;}
+        .chooseIn_top div{width:34px; text-align: center;border-right:1px solid #CDCDCD;  float: left;}
+        .chooseIn_top h5{ float: left;padding-left:20px;}
+        .touSu{border:1px solid #CDCDCD;width:97%;margin:20px auto}
+        .container1,.container2{  float: left;height:250px;width:50%}
+        .chooseDate{font-size:14px;position:absolute;top:10px;right:10px;}
+        .chooseDate input{width:57px;height:20px;}
+        .chooseIn_foot{width:100%;margin-top:20px;position:relative}
+    </style>
 </head>
 <body>
 <!--头部-->
@@ -63,10 +76,10 @@
 <div class="left">
     <div class="left_list" id="left_list2">
         <a href="javascript:;" class="li_a" name="2"><em><img src="../../images/bb.png" alt=""></em>报表中心<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
-        <div class="left_slide">
-            <span><a href="../报表中心/Reporting_Charges_index.html">计费报表</a></span>
-            <span><a href="../报表中心/Reporting_touShu.html">投诉统计</a></span>
-            <span><a href="../报表中心/Reporting_baoXiu.html">报修统计</a></span>
+        <div class="left_slide" style="display:block">
+            <span><a href="Reporting_Charges_index.jsp">计费报表</a></span>
+            <span style="background-color:#ff3816"><a href="#">投诉统计</a></span>
+            <span><a href="Reporting_baoXiu.jsp">报修统计</a></span>
         </div>
         <a href="javascript:;" class="li_a" name="2"><em><img src="../../images/z1.png" alt=""></em>计费管理<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
         <div class="left_slide">
@@ -98,12 +111,12 @@
             <span><a href="../巡更管理/property_Patrolling_NFC.html">NFC订单</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z9.png" alt=""></em>设备巡检<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
-        <div class="left_slide"  style="display:block">
-            <span ><a href="equipment_index.jsp">内容模板</a></span>
-            <span style="background-color:#ff3816"><a href="equipment_manage.jsp">设备管理</a></span>
-            <span><a href="equipment_plan.jsp">巡检计划</a></span>
-            <span><a href="equipment_message.jsp">巡检信息</a></span>
-            <span><a href="equipment_NFC.jsp">NFC订单</a></span>
+        <div class="left_slide">
+            <span><a href="../设备巡检/equipment_index.html">内容模板</a></span>
+            <span><a href="../设备巡检/equipment_manage.html">设备管理</a></span>
+            <span><a href="../设备巡检/equipment_plan.html">巡检计划</a></span>
+            <span><a href="../设备巡检/equipment_message.html">巡检信息</a></span>
+            <span><a href="../设备巡检/equipment_NFC.html">NFC订单</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z10.png" alt=""></em>小区门禁<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
         <div class="left_slide">
@@ -135,136 +148,30 @@
     </div>
 </div>
 <div class="con_head" id="con_head">
-    <em><img src="../../images/Hshebeixunjian.png" alt=""></em><a href="#">设备巡检</a><span>></span><a href="#">巡检设施管理</a><span>></span><a href="#">新增巡检设施</a>
+    <em><img src="../../images/H_form.png" alt=""></em><a href="#">报表中心</a><span>></span><a href="#">投诉统计</a>
 </div>
-<div class="con" style="margin-top:0;margin-left:200px;overflow:hidden">
-    <div class="equipment_index_biao">
-        <div class="equipment_index_top chairFix">
-            <div><img src="../../images/Hbi.png" alt=""></div>
-            <p>新增设施信息</p>
+<div class="con" style="margin-top:15px">
+    <div class="touSu">
+        <div class="chooseIn_top chairFix">
+            <div><img src="../../images/H_edit.png" alt=""></div>
+            <h5>投诉统计</h5>
         </div>
-        <form action="" class="theForm equipmetn_theForm">
-            <div>
-                <label for=""><em>*</em>巡检设施标题</label>
-                <input type="text" class="ipt1">
-            </div>
-            <div>
-                <label for=""><em>*</em>巡检内容模板:</label>
-                <p>
-                    <span class="theBord"></span>
-                    <a href="javascript:;" class="chooseBord">选择模板</a>
-                </p>
-            </div>
-            <div>
-                <label for="">总金额:</label>
-                <p>15.00元</p>
-            </div>
-            <div>
-                <label for="">批量添加</label>
-                <select name="" id="">
-                    <option value="是">是</option>
-                    <option value="否">否</option>
-                </select>
-            </div>
-        </form>
-    </div>
-    <div class="equipment_index_biao">
-        <div class="equipment_index_top chairFix">
-            <div><img src="../../images/Hbi.png" alt=""></div>
-            <p>新增设施信息</p>
+        <div class="chooseIn_con chairFix">
+            <div class="container1"></div>
+            <div class="container2"></div>
         </div>
-        <form action="" class="theForm equipmetn_theForm">
-            <div>
-                <label for="" >设备名称</label>
-                <input type="text"  class="ipt2">
-            </div>
-            <div>
-                <label for="">型号</label>
-                <input type="text"  class="ipt3">
-            </div>
-            <div>
-                <label for="">品牌</label>
-                <input type="text"  class="ipt4">
-            </div>
-            <div>
-                <label for="">生产厂家</label>
-                <input type="text"  class="ipt5">
-            </div>
-            <div>
-                <label for="">生产日期</label>
-                <input type="date"  class="ipt6">
-            </div>
-            <div>
-                <label for="">采购日期</label>
-                <input type="date"  class="ipt7">
-            </div>
-            <div>
-                <label for="">采购单价</label>
-                <input type="text"  class="ipt8">
-            </div>
-            <div>
-                <label for="">功能描述</label>
-                <textarea name="" id="" cols="30" rows="10"  class="ipt9"></textarea>
-            </div>
-        </form>
-        <div class="theForm_fot">
-            <a href="javascript:;" class="save">保存</a>
-            <a href="equipment_manage.jsp" class="close">返回</a>
+        <div class="chooseIn_foot">
+            <div class="chooseIn_fo" style="width: 100%; height: 400px; margin: 0px auto;"></div>
+            <p class="chooseDate">
+                <label for="">选择日期</label>
+                <input type="number" value="2017" id="theDate">
+            </p>
         </div>
-    </div>
-</div>
-<div class="mask"></div>
-<div class="waring">请输入巡检内容</div>
-<div class="maskCon">
-    <div class="maskCon_top chairfix">
-        <span>选择模板</span>
-        <var class="maskCon_top_del">x</var>
-    </div>
-    <div class="equipment_list" style="width:95%;border:none">
-        <div style="background-color:#EFEFEF;border:1px solid #CDCDCD">
-            <div class="equipment_list_title chairfix">
-                <div><img src="../../images/H_ViewGallery.png" alt=""></div>
-                <span>巡检内容模板列表</span>
-            </div>
-            <div>
-                <ul class="equipment_list_mess equipment_managed_mess maskCon_mess chairfix">
-                    <li><span>模板名称</span></li>
-                    <li><span>版本号</span></li>
-                    <li style="width:34%"><sapan>操作</sapan></li>
-                </ul>
-            </div>
-            <ul class="equipment_list_message">
-                <li>
-                    <ul class="equipment_list_mess equipment_managed_mess maskCon_mess chairfix">
-                        <li><span>xxx</span></li>
-                        <li><span>xxxx</span></li>
-                        <li style="width:34%">
-                            <span><a href="javascript:;">选择模板</a></span>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="equipment_list_foot chairfix">
-                <p>从
-                    <span class="equipment_list_footSpa1">1</span>到
-                    <span class="equipment_list_footSpa2">1</span>/共
-                    <span class="equipment_list_footSpa3">1</span>数据
-                </p>
-                <p>
-                    <a href="">首页</a>
-                    <a href="">前一页</a>
-                    <span>1</span>
-                    <a href="">后一页</a>
-                    <a href="">尾页</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="maskCon_fot equipment_list_fot chairfix">
-        <a href="javascript:;" class="maskCon_fot_quXiao">取消</a>
     </div>
 </div>
 <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script src="../../js/Highcharts111.js"></script>
+<script src="../../js/Reporting_touSu.js"></script>
 <script>
     /*左侧效果*/
     $(".li_a").bind("click", function() {
@@ -291,74 +198,98 @@
         var a=$(this).html();
         $('.hr_show').html(a);
     });
-    /*弹出效果*/
-    function alWar(){
-        setTimeout(function(){
-            $(".waring").show()
-            timer1=setInterval(function(){
-                a+=1/20;
-                if (a>=1) {
-                    a=1;
-                    clearInterval(timer1)
-                };
-                $(".waring").get(0).style.opacity=a
-            },50)
-        },100)
-        setTimeout(function(){
-            timer2= setInterval(function(){
-                a-=1/10;
-                if (a<=0) {
-                    a=0;
-                    $(".waring").hide()
-                    clearInterval(timer2)
-                }
-                $(".waring").get(0).style.opacity=a;
-            },50)
-        },2100)
-    }
-    var timer1=timer2=null;
-    var a=0;
-    $(".save").click(function(){
-        var a=0;
-        clearInterval(timer1);
-        clearInterval(timer2);
-        if($(".ipt1").val()==""){
-            $(".waring").html("请添加巡检设施标题")
-            $(".ipt1").css("border","1px solid #FF3816")
-            alWar()
+    /*投诉概况双线图*/
+    $(document).ready(function() {
+        var title = {
+            text: '投诉概况'
+        };
+         var xAxis = {
+            categories: ["2017/1","2017/2","2017/3","2017/4","2017/5","2017/6","2017/7","2017/8","2017/9","2017/10","2017/11","2017/12"]
+         };
+        var yAxis = {
+            title: {
+                text: ''
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        };
+        var tooltip = {
+            valueSuffix: ''
         }
-        else{
-            if($(".theBord").get(0).innerHTML==""){
-                $(".waring").html("请选择模板")
-                $(".ipt1").css("border","1px solid #CDCDCD")
-                alWar()
+        var legend = {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 1
+        };
+        var series =  [
+            {
+                name: '投诉数量',
+                data: [1,5,7,11,3,1,0,5,8,9,3,8]
+            },
+            {
+                name: '已处理数量',
+                data: [1,4,6,9,2,1,0,5,8,6,2,7]
             }
-        }
-    })
-    $(".maskCon_top_del").click(function(){
-        $(".mask").hide();
-        $(".maskCon").hide();
-    })
-    $(".maskCon_fot_quXiao").click(function(){
-        $(".mask").hide();
-        $(".maskCon").hide();
-    })
-    $(".chooseBord").click(function(){
-        $(".mask").show();
-        $(".maskCon").show();
-    })
-    /*输入框聚焦效果*/
-    $("input[type=text]").addClass("cr_ipt1")
-    $("textarea").addClass("cr_ipt1")
-    $("input[type=text]").css("border","1px solid #CDCDCD")
-    $("textarea").css("border","1px solid #CDCDCD")
-    $('.cr_ipt1').focus(function () {
-        var i=$(this).index('.cr_ipt1');
-        $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 5px #0599FB','border':'1px solid #5bc0de'});
-    });
-    $('.cr_ipt1').blur(function () {
-        var i=$(this).index('.cr_ipt1');
-        $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 0 #fff','border':'1px solid #ccc'});
+        ];
+        var json = {};
+        json.title = title;
+        json.xAxis = xAxis;
+        json.yAxis = yAxis;
+        json.tooltip = tooltip;
+        json.legend = legend;
+        json.series = series;
+        $('.chooseIn_fo').highcharts(json);
+
+        $("#theDate").click(function(){
+            Dat=$("#theDate").get(0).value;
+            var title = {
+                text: '投诉概况'
+            };
+            var xAxis = {
+                categories: [Dat+"/1",Dat+"/2",Dat+"/3",Dat+"/4",Dat+"/5",Dat+"/6",Dat+"/7",Dat+"/8",Dat+"/9",Dat+"/10",Dat+"/11",Dat+"/12"]
+            };
+            var yAxis = {
+                title: {
+                    text: ''
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            };
+            var tooltip = {
+                valueSuffix: ''
+            }
+            var legend = {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 1
+            };
+            var series =  [
+                {
+                    name: '投诉数量',
+                    data: [1,5,7,11,3,1,0,5,8,9,3,8]
+                },
+                {
+                    name: '已处理数量',
+                    data: [1,4,6,9,2,1,0,5,8,6,2,7]
+                }
+            ];
+            var json = {};
+            json.title = title;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;
+            json.tooltip = tooltip;
+            json.legend = legend;
+            json.series = series;
+            $('.chooseIn_fo').highcharts(json);
+        })
     });
 </script>
 </body>

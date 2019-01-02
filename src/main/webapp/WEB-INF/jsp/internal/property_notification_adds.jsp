@@ -1,14 +1,14 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>J
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>内部通知</title>
+    <title>新增内部通知</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/property.css">
-    <link rel="stylesheet" href="../../css/property_Internal_notification.css">
+    <link rel="stylesheet" href="../../css/property_repair_adds.css">
 </head>
 <body>
 <!--头部-->
@@ -137,44 +137,89 @@
     <div class="con_head" id="con_head">
         <em><img src="../../images/wy.png" alt=""></em><a href="#">内部管理</a><span>></span><a href="#">内部通知</a>
     </div>
-    <div class="con"  style="margin-top: 15px;margin-left: 220px;margin-right: 10px;">
+    <div class="con"  style="border:1px solid #ccc;margin-top: 15px;margin-left: 220px;margin-right: 10px;height: 760px;">
         <div class="con_left">
             <div class="con_left_head">
-                <em><img src="../../images/xql.png" alt=""></em>内部通知
-                <a href="property_notification_adds.jsp" class="ch_a">新增</a>
+                <em><img src="../../images/y_ad.png" alt=""></em>新增内部通知
             </div>
-            <table class="list">
-                <tr class="t_head">
-                    <td>封面</td>
-                    <td>发布对象</td>
-                    <td>状态</td>
-                    <td>是否置顶</td>
-                    <td>发布时间</td>
-                    <td>操作</td>
-                </tr>
-                <tr>
-                    <td>46465</td>
-                    <td>46465</td>
-                    <td>46465</td>
-                    <td>46465</td>
-                    <td>2017年2月17日14:32:11</td>
-                    <td><button>修改</button></td>
-                </tr>
-            </table>
-            <ul class="fy">
-                <li>首页</li>
-                <li>前一页</li>
-                <li>后一页</li>
-                <li>尾页</li>
-            </ul>
-        </div>
+            <div class="con_box" style="padding-bottom: 30px;">
+                <form action="">
+                    <div class="figs">
+                        <span><em>*</em>标题：</span>
+                        <input type="text" class="cr_ipt1">
+                    </div>
+                    <div class="figs" style="overflow: hidden;height: 230px;">
+                        <span style="float: left;">封面：</span>
+                        <div style="float: left;">
+                            <div id="img_file" style="width: 200px;height: 150px;margin-top: 15px;margin-left: 5px">
+                                <img src="../../images/img.png" alt="" style="border: 0;">
+                            </div>
+                            <div>
+                                <a href="javascript:;" class="file">
+                                    上传图片
+                                    <input type="file" name="" accept=".JPG,.JPEG,.PNG" id="photo">
+                                </a>
+                            </div>
+                        </div>
 
+                    </div>
+                    <div class="figs">
+                        <span>是否置顶：</span>
+                        <input type="checkbox" style="width: 15px;height: 15px;margin-right: 5px;vertical-align: middle;">置顶后将在物业APP顶部显示
+                    </div>
+                    <div class="figs">
+                        <span><em>*</em>选择小区：</span>
+                        <select name="" style="width: 250px">
+                            <option value="kaiqi">郑州市德旺物业管理有限公司</option>
+                            <option value="guanbi">美景天城</option>
+                        </select>
+                    </div>
+                    <div class="figs" id="figs2" style="overflow: hidden;height: auto;padding: 10px 0 10px 60px;line-height: normal">
+                        <span style="float: left;width: 170px"><em>*</em>内容：</span>
+                        <div style="float: left">
+                            <textarea class="cr_ipt1" name="" id="" style="width: 550px;height: 150px;padding: 10px;border: 1px solid #ddd;font-size: 15px;color: #666;font-family: '微软雅黑', serif"></textarea>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button style="margin-left: 60px;">保存</button>
+                        <a href="property_Internal_notification.jsp" class="btn_a" style="background-color: #ff3816">返回</a>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
     <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
     <script>
 
+        /*上传图片效果*/
+        $("#photo").get(0).addEventListener('change',function(){
+            var files = this.files;
+            var img = new Image();
+            var reader = new FileReader();
+            reader.readAsDataURL(files[0]);
+            reader.onload = function(e){
+                var mb = (e.total/1024)/1024;
+                if(mb>= 1){
+                    alert('文件大小大于1M');
+                    return;
+                }
+                img.src = this.result;
+                if ($("#img_file").find("img").length){
+                    $("#img_file img").remove();
+                }
+                $("#img_file")[0].appendChild(img);
+            }
+        });
 
-
+        /*输入框聚焦效果*/
+        $('.cr_ipt1').focus(function () {
+            var i=$(this).index('.cr_ipt1');
+            $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 5px #0599FB','border':'1px solid #5bc0de'});
+        });
+        $('.cr_ipt1').blur(function () {
+            var i=$(this).index('.cr_ipt1');
+            $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 0 #fff','border':'1px solid #ddd'});
+        });
 
         /*左侧效果*/
         $(".li_a").bind("click", function() {

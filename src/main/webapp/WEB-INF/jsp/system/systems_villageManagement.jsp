@@ -6,9 +6,14 @@
     <title>物业后台</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/property.css">
-    <link rel="stylesheet" href="../../css/equipment.css">
+    <link rel="stylesheet" href="../../css/valueService.css">
+    <link rel="stylesheet" href="../../css/systemsManagement.css">
+    <style>
+        a:hover{text-decoration:none}
+    </style>
 </head>
 <body>
 <!--头部-->
@@ -98,12 +103,12 @@
             <span><a href="../巡更管理/property_Patrolling_NFC.html">NFC订单</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z9.png" alt=""></em>设备巡检<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
-        <div class="left_slide"  style="display:block">
-            <span ><a href="equipment_index.jsp">内容模板</a></span>
-            <span style="background-color:#ff3816"><a href="equipment_manage.jsp">设备管理</a></span>
-            <span><a href="equipment_plan.jsp">巡检计划</a></span>
-            <span><a href="equipment_message.jsp">巡检信息</a></span>
-            <span><a href="equipment_NFC.jsp">NFC订单</a></span>
+        <div class="left_slide">
+            <span ><a href="../设备巡检/equipment_index.html">内容模板</a></span>
+            <span><a href="../设备巡检/equipment_manage.html">设备管理</a></span>
+            <span><a href="../设备巡检/equipment_plan.html">巡检计划</a></span>
+            <span><a href="../设备巡检/equipment_message.html">巡检信息</a></span>
+            <span><a href="../设备巡检/equipment_NFC.html">NFC订单</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z10.png" alt=""></em>小区门禁<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
         <div class="left_slide">
@@ -121,150 +126,118 @@
             <span><a href="../内部管理/property_Internal_notification.html">内部通知</a></span>
         </div>
         <a href="javascript:;" class="li_a"><em><img src="../../images/z13.png" alt=""></em>系统管理<em class="left_em2"><img src="../../images/4.png" alt=""></em></a>
-        <div class="left_slide" style="padding-bottom: 80px;">
-            <span><a href="../系统管理/property_system_company.html">物业公司</a></span>
-            <span><a href="../系统管理/property_payment_information.html">支付信息</a></span>
-            <span><a href="../系统管理/property_Personnel_group.html">人员群组</a></span>
-            <span><a href="../系统管理/systems_estate.html">物业管理处</a></span>
-            <span><a href="../系统管理/systems_villageManagement.html">小区管理</a></span>
-            <span><a href="../系统管理/property_Housing_information.html">房屋信息</a></span>
-            <span><a href="../系统管理/systems_owner.html">业主信息</a></span>
-            <span><a href="../系统管理/systems_permission.html">角色权限</a></span>
-            <span><a href="../系统管理/systems_systemsLog.html">系统日志</a></span>
+        <div class="left_slide" style="padding-bottom: 80px;display:block">
+            <span><a href="property_system_company.jsp">物业公司</a></span>
+            <span><a href="property_payment_information.jsp">支付信息</a></span>
+            <span><a href="property_Personnel_group.jsp">人员群组</a></span>
+            <span><a href="systems_estate.jsp">物业管理处</a></span>
+            <span  style="background-color:#ff3816"><a href="systems_villageManagement.jsp">小区管理</a></span>
+            <span><a href="property_Housing_information.jsp">房屋信息</a></span>
+            <span><a href="systems_owner.jsp">业主信息</a></span>
+            <span><a href="systems_permission.jsp">角色权限</a></span>
+            <span><a href="systems_systemsLog.jsp">系统日志</a></span>
         </div>
     </div>
 </div>
 <div class="con_head" id="con_head">
-    <em><img src="../../images/Hshebeixunjian.png" alt=""></em><a href="#">设备巡检</a><span>></span><a href="#">巡检设施管理</a><span>></span><a href="#">新增巡检设施</a>
+    <em><img src="../../images/Hxitong.png" alt="" style="vertical-align: sub"></em><a href="#">系统管理</a><span>></span><a href="#">小区管理</a>
 </div>
 <div class="con" style="margin-top:0;margin-left:200px;overflow:hidden">
     <div class="equipment_index_biao">
         <div class="equipment_index_top chairFix">
             <div><img src="../../images/Hbi.png" alt=""></div>
-            <p>新增设施信息</p>
+            <p>编辑小区名称</p>
         </div>
         <form action="" class="theForm equipmetn_theForm">
             <div>
-                <label for=""><em>*</em>巡检设施标题</label>
+                <label for=""><em>*</em>小区名称</label>
                 <input type="text" class="ipt1">
             </div>
             <div>
-                <label for=""><em>*</em>巡检内容模板:</label>
-                <p>
-                    <span class="theBord"></span>
-                    <a href="javascript:;" class="chooseBord">选择模板</a>
-                </p>
+                <label for=""><em>*</em>小区建筑面积</label>
+                <input type="text" class="ipt2">
+                <span>万m</span>
+                <sup>2</sup>
             </div>
             <div>
-                <label for="">总金额:</label>
-                <p>15.00元</p>
+                <label for=""><em>*</em>小区户数</label>
+                <input type="text" class="ipt3">
+                户
             </div>
             <div>
-                <label for="">批量添加</label>
-                <select name="" id="">
-                    <option value="是">是</option>
-                    <option value="否">否</option>
-                </select>
+                <label for=""><em>*</em>小区建成时间</label>
+                <input type="date" class="ipt4">
+            </div>
+            <div>
+                <label for=""><em>*</em>所属辖区</label>
+                <div class="form-inline">
+                    <div data-toggle="distpicker">
+                        <div class="form-group">
+                            <label class="sr-only" for="province2">Province</label>
+                            <select class="form-control" id="province2" data-province="---- 选择省 ----"></select>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="city2">City</label>
+                            <select class="form-control" id="city2" data-city="---- 选择市 ----"></select>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="district2">District</label>
+                            <select class="form-control" id="district2" data-district="---- 选择区 ----"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for=""><em>*</em>小区详细地址</label>
+                <input type="text">
             </div>
         </form>
     </div>
+
     <div class="equipment_index_biao">
         <div class="equipment_index_top chairFix">
             <div><img src="../../images/Hbi.png" alt=""></div>
-            <p>新增设施信息</p>
+            <p>物业常用电话</p>
         </div>
-        <form action="" class="theForm equipmetn_theForm">
-            <div>
-                <label for="" >设备名称</label>
-                <input type="text"  class="ipt2">
-            </div>
-            <div>
-                <label for="">型号</label>
-                <input type="text"  class="ipt3">
-            </div>
-            <div>
-                <label for="">品牌</label>
-                <input type="text"  class="ipt4">
-            </div>
-            <div>
-                <label for="">生产厂家</label>
-                <input type="text"  class="ipt5">
-            </div>
-            <div>
-                <label for="">生产日期</label>
-                <input type="date"  class="ipt6">
-            </div>
-            <div>
-                <label for="">采购日期</label>
-                <input type="date"  class="ipt7">
-            </div>
-            <div>
-                <label for="">采购单价</label>
-                <input type="text"  class="ipt8">
-            </div>
-            <div>
-                <label for="">功能描述</label>
-                <textarea name="" id="" cols="30" rows="10"  class="ipt9"></textarea>
-            </div>
-        </form>
-        <div class="theForm_fot">
+        <ul id="alwaysPhone" class="chairfix">
+            <li>
+                <span>电话名称</span>
+                <input type="text" value="物业管理处电话" disabled>
+                <span>电话号码</span>
+                <input type="text">
+            </li>
+            <li>
+                <span>电话名称</span>
+                <input type="text"  value="房屋租赁电话" disabled>
+                <span>电话号码</span>
+                <input type="text">
+            </li>
+            <li>
+                <span>电话名称</span>
+                <input type="text"  value="夜间值班电话" disabled>
+                <span>电话号码</span>
+                <input type="text">
+            </li><!--
+            <li>
+                <span>电话名称</span>
+                <input type="text">
+                <span>电话号码</span>
+                <input type="text">
+                <var><img src="../../images/Hdele1.png" alt="">删除</var>
+            </li>-->
+        </ul>
+        <strong class="theAdd"><img src="../../images/Hadd.png" alt="">添加服务项目</strong>
+        <div class="theForm_fot chairfix">
             <a href="javascript:;" class="save">保存</a>
-            <a href="equipment_manage.jsp" class="close">返回</a>
         </div>
     </div>
 </div>
 <div class="mask"></div>
 <div class="waring">请输入巡检内容</div>
-<div class="maskCon">
-    <div class="maskCon_top chairfix">
-        <span>选择模板</span>
-        <var class="maskCon_top_del">x</var>
-    </div>
-    <div class="equipment_list" style="width:95%;border:none">
-        <div style="background-color:#EFEFEF;border:1px solid #CDCDCD">
-            <div class="equipment_list_title chairfix">
-                <div><img src="../../images/H_ViewGallery.png" alt=""></div>
-                <span>巡检内容模板列表</span>
-            </div>
-            <div>
-                <ul class="equipment_list_mess equipment_managed_mess maskCon_mess chairfix">
-                    <li><span>模板名称</span></li>
-                    <li><span>版本号</span></li>
-                    <li style="width:34%"><sapan>操作</sapan></li>
-                </ul>
-            </div>
-            <ul class="equipment_list_message">
-                <li>
-                    <ul class="equipment_list_mess equipment_managed_mess maskCon_mess chairfix">
-                        <li><span>xxx</span></li>
-                        <li><span>xxxx</span></li>
-                        <li style="width:34%">
-                            <span><a href="javascript:;">选择模板</a></span>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="equipment_list_foot chairfix">
-                <p>从
-                    <span class="equipment_list_footSpa1">1</span>到
-                    <span class="equipment_list_footSpa2">1</span>/共
-                    <span class="equipment_list_footSpa3">1</span>数据
-                </p>
-                <p>
-                    <a href="">首页</a>
-                    <a href="">前一页</a>
-                    <span>1</span>
-                    <a href="">后一页</a>
-                    <a href="">尾页</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="maskCon_fot equipment_list_fot chairfix">
-        <a href="javascript:;" class="maskCon_fot_quXiao">取消</a>
-    </div>
-</div>
 <script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../js/distpicker.data.js"></script>
+<script type="text/javascript" src="../../js/distpicker.js"></script>
+<script type="text/javascript" src="../../js/main.js"></script>
 <script>
     /*左侧效果*/
     $(".li_a").bind("click", function() {
@@ -323,35 +296,55 @@
         clearInterval(timer1);
         clearInterval(timer2);
         if($(".ipt1").val()==""){
-            $(".waring").html("请添加巡检设施标题")
+            $(".waring").html("小区名称")
             $(".ipt1").css("border","1px solid #FF3816")
             alWar()
         }
         else{
-            if($(".theBord").get(0).innerHTML==""){
-                $(".waring").html("请选择模板")
+            if($(".ipt2").val()==""){
+                $(".waring").html("小区建筑面积")
                 $(".ipt1").css("border","1px solid #CDCDCD")
+                $(".ipt2").css("border","1px solid #FF3816")
                 alWar()
+            }else{
+                if($(".ipt3").val()==""){
+                    $(".waring").html("小区户数")
+                    $(".ipt2").css("border","1px solid #CDCDCD")
+                    $(".ipt3").css("border","1px solid #FF3816")
+                    alWar()
+                }else{
+                    if($(".ipt4").val()==""){
+                        $(".waring").html("小区建成时间")
+                        $(".ipt3").css("border","1px solid #CDCDCD")
+                        $(".ipt4").css("border","1px solid #FF3816")
+                        alWar()
+                    }else{
+                        $(".ipt4").css("border","1px solid #CDCDCD")
+                    }
+                }
             }
         }
     })
-    $(".maskCon_top_del").click(function(){
-        $(".mask").hide();
-        $(".maskCon").hide();
-    })
-    $(".maskCon_fot_quXiao").click(function(){
-        $(".mask").hide();
-        $(".maskCon").hide();
-    })
-    $(".chooseBord").click(function(){
-        $(".mask").show();
-        $(".maskCon").show();
-    })
+    /*删除hover*/
+    $("#alwaysPhone").delegate("var","mouseover",function(){
+        var i=$("#alwaysPhone var").index(this);
+        $("#alwaysPhone var img").eq(i).get(0).src="../../images/Hdele2.png";
+    });
+    $("#alwaysPhone").delegate("var","mouseout",function(){
+        var i=$("#alwaysPhone var").index(this);
+        $("#alwaysPhone var img").eq(i).get(0).src="../../images/Hdele1.png";
+    });
+    $(".theAdd").click(function(){
+        $("#alwaysPhone").get(0).innerHTML+='<li><span>电话名称</span><input type="text"><span>电话号码</span><input type="text"><var><img src="../../images/Hdele1.png" alt="">删除</var></li>'
+    });
+    $("#alwaysPhone").delegate("var","click",function(){
+        $(this).parent().hide();
+    });
     /*输入框聚焦效果*/
-    $("input[type=text]").addClass("cr_ipt1")
-    $("textarea").addClass("cr_ipt1")
-    $("input[type=text]").css("border","1px solid #CDCDCD")
-    $("textarea").css("border","1px solid #CDCDCD")
+    if($("input").parent().parent()!=$("#alwaysPhone")){
+        $("input").addClass("cr_ipt1")
+        $("input").css("border","1px solid #CDCDCD")
+    }
     $('.cr_ipt1').focus(function () {
         var i=$(this).index('.cr_ipt1');
         $('.cr_ipt1').eq(i).css({'box-shadow':'0 0 5px #0599FB','border':'1px solid #5bc0de'});
