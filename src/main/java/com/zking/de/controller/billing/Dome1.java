@@ -16,7 +16,7 @@ public class Dome1 {
 
     @RequestMapping("add")
     public String add(){
-        System.out.println("aaaaaaaa");
+        System.out.println("aaaaaaaaaaa");
         File file = new File();
         file.setFileId("1");
         System.out.println(file.getFileId());
