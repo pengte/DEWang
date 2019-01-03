@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Dome2 {
     @RequestMapping("/zking.shtml")
     public String add(){
-        return "index";
+        return "announcement/property_announcements";
     }
 
 }
