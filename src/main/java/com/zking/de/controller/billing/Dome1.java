@@ -14,7 +14,7 @@ public class Dome1 {
     @Autowired
     private IFileService fileService;
 
-    @RequestMapping("addd")
+    @RequestMapping("add")
     public String add(){
         System.out.println("aaaaaaaaaaaaaaabbbaa");
         File file = new File();
